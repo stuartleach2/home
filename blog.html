@@ -1,1 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Stuart Leach Photography</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7; /* Light gray for background */
+        }
+        .container {
+            padding: 20px;
+        }
+        footer {
+            background-color: #6f42c1; /* Purple background for footer */
+            color: white;
+            padding: 20px 0;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+        .navbar-nav {
+            margin-left: auto; /* Push the menu to the right */
+        }
+        .nav-item .nav-link {
+            font-size: 1rem; /* Adjust font size if needed */
+        }
+    </style>
+</head>
+<body>
+    <header class="text-black text-center py-4">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6f42c1;"> <!-- Purple background for navbar -->
+            <a class="navbar-brand" href="index.html">Stuart Leach Photography</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
+    <div class="container">
+        <h2 class="text-center mb-4">Blog</h2>
+        <!-- Blog Posts -->
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="blog-image-1.jpg" alt="Blog image 1">
+                    <div class="card-body">
+                        <h2 class="card-title">Blog Post Title 1</h2>
+                        <p class="card-text">This is a short description or summary of the blog post content. It gives readers a quick insight into the post.</p>
+                        <a href="#" class="btn btn-primary" style="background-color: #6f42c1;">Read More &rarr;</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Posted on January 1, 2024 by <a href="#">Stuart Leach</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <img class="card-img-top" src="blog-image-2.jpg" alt="Blog image 2">
+                    <div class="card-body">
+                        <h2 class="card-title">Blog Post Title 2</h2>
+                        <p class="card-text">This is a short description or summary of the blog post content. It gives readers a quick insight into the post.</p>
+                        <a href="#" class="btn btn-primary" style="background-color: #6f42c1;">Read More &rarr;</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Posted on February 15, 2024 by <a href="#">Stuart Leach</a>
+                    </div>
+                </div>
+
+                <!-- Add more blog posts as needed -->
+            </div>
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+                <!-- Search Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Search</h5>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-append">
+                                <button class="btn btn-primary" type="button" style="background-color: #6f42c1;">Go!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Categories</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#">Photography</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Travel</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tips</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#">Gear</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Reviews</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">News</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Side Widget</h5>
+                    <div class="card-body">
+                        You can use this space to display any additional information you’d like your visitors to see. This could be a call to action, a promotion, or any other content that fits your needs.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="social-links">
+            <a href="https://www.instagram.com/stuartleach2" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+            <a href="https://photos.app.goo.gl/nrAaYCNykaptK5rf6" target="_blank"><i class="bi bi-image"></i> Google Prints</a>
+        </div>
+        <p>&copy; 2024 Stuart Leach. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
