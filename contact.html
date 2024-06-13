@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Page</title>
+    <title>Contact - Stuart Leach Photography</title>
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons CSS -->
@@ -14,11 +14,6 @@
         }
         .container {
             padding: 20px;
-        }
-        .gallery img {
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 15px;
         }
         footer {
             background-color: #6f42c1; /* Purple background for footer */
@@ -68,29 +63,31 @@
         </nav>
     </header>
 
-    <div class="container text-center">
-        <h2>Welcome to My Website</h2>
-        <p class="mb-3">Use the navigation menu to explore different sections of the site.</p>
-        <h2>Most Recent</h2>
-        <div class="gallery row">
-            <div class="col-md-4">
-                <img src="FullSizeRender.jpeg" alt="Photo 1" class="img-fluid">
+    <div class="container">
+        <h2 class="text-center">Contact Me</h2>
+        <p class="text-center">Feel free to get in touch using the form below.</p>
+
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
             </div>
-            <div class="col-md-4">
-                <img src="IMG_1369.jpeg" alt="Photo 2" class="img-fluid">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
             </div>
-            <div class="col-md-4">
-                <img src="IMG_1372.jpeg" alt="Photo 3" class="img-fluid">
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
             </div>
-            <!-- Add more photos as needed -->
-        </div>
+            <button type="submit" class="btn btn-primary" style="background-color: #6f42c1;">Submit</button>
+        </form>
     </div>
 
     <footer class="text-center">
         <div class="social-links">
             <a href="https://www.instagram.com/stuartleach2" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
             <a href="https://photos.app.goo.gl/nrAaYCNykaptK5rf6" target="_blank"><i class="bi bi-image"></i> Google Prints</a>
-            <!-- Add more album links if needed -->
         </div>
         <p>&copy; 2024 Stuart Leach. All rights reserved.</p>
     </footer>
