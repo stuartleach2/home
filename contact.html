@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7; /* Light gray for background */
+        }
+        .container {
+            padding: 20px;
+        }
+        .gallery img {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #6f42c1; /* Purple background for footer */
+            color: white;
+            padding: 20px 0;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+        .navbar-nav {
+            margin-left: auto; /* Push the menu to the right */
+        }
+        .nav-item .nav-link {
+            font-size: 1rem; /* Adjust font size if needed */
+        }
+    </style>
+</head>
+<body>
+    <header class="text-black text-center py-4">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6f42c1;"> <!-- Purple background for navbar -->
+            <a class="navbar-brand" href="index.html">Stuart Leach Photography</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
+    <div class="container text-center">
+        <h2>Welcome to My Website</h2>
+        <p class="mb-3">Use the navigation menu to explore different sections of the site.</p>
+        <h2>Most Recent</h2>
+        <div class="gallery row">
+            <div class="col-md-4">
+                <img src="FullSizeRender.jpeg" alt="Photo 1" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="IMG_1369.jpeg" alt="Photo 2" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="IMG_1372.jpeg" alt="Photo 3" class="img-fluid">
+            </div>
+            <!-- Add more photos as needed -->
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="social-links">
+            <a href="https://www.instagram.com/stuartleach2" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+            <a href="https://photos.app.goo.gl/nrAaYCNykaptK5rf6" target="_blank"><i class="bi bi-image"></i> Google Prints</a>
+            <!-- Add more album links if needed -->
+        </div>
+        <p>&copy; 2024 Stuart Leach. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
