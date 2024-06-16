@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>About Me - Stuart Leach Photography</title>
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f7f7f7;
+            background-color: #f7f7f7; /* Light gray for background */
+            padding-top: 70px; /* Ensure content is not hidden behind the navbar */
         }
         .container {
             padding: 20px;
         }
         footer {
-            background-color: #6f42c1;
+            background-color: #6f42c1; /* Purple background for footer */
             color: white;
             padding: 20px 0;
         }
@@ -26,16 +27,18 @@
             font-size: 1.2em;
             text-decoration: none;
         }
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
+        .navbar-nav {
+            margin-left: auto; /* Push the menu to the right */
+        }
+        .nav-item .nav-link {
+            font-size: 1rem; /* Adjust font size if needed */
         }
     </style>
 </head>
 <body>
-    <header class="bg-light text-black text-center py-4">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6f42c1;">
+    <!-- Header with fixed-top navbar -->
+    <header class="text-black text-center py-4">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #6f42c1;"> <!-- Purple background for navbar -->
             <a class="navbar-brand" href="index.html">Stuart Leach Photography</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -62,27 +65,22 @@
         </nav>
     </header>
 
+    <!-- Main content -->
     <div class="container text-center">
         <h2>About Me</h2>
-        <div class="row mt-4">
-            <div class="col-lg-8 mx-auto">
-                <div class="card">
-                    <div class="card-body">
-                        <img src="Snapseed.jpeg" alt="Stuart Leach" class="rounded-circle img-thumbnail mb-3 profile-photo">
-                        <p>Hello! I’m Stuart, a devoted husband and proud father of two wonderful neurodivergent children, living in Harrogate, North Yorkshire. My passions include photography, travel, architecture, and reading.</p>
-                        <p>Professionally, I am fascinated how technology can make the world a better and more inclusive place for all of us, particularly in healthcare and education.</p>
-                        <p>My qualifications include an MSc in IT and Digital Futures with a DevOps specialization, and certifications as a Scrum Master and Product Owner. I am skilled in Lean and Agile principles, SAP solutions, process improvement, change management, project and program management.</p>
-                        <p>To learn more about my professional life, please visit my <a href="http://linkedin.com/in/stuart-leach-86b37b9" target="_blank">LinkedIn profile</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <p class="mb-3">I'm a husband and father of two neurodivergent children, interested in photography, technology, travel, architecture, and reading in my spare time.</p>
+        <p class="mb-3">With over 20 years of IT leadership experience across various industries, I am a seasoned IT and digital transformation leader who is passionate about delivering value-added solutions and capabilities that enable and support business strategy.</p>
+        <p class="mb-3">I am currently the Senior Director Commercial IT Europe West & Nordics and Global Microsoft 365 Programme Manager at Teva Pharmaceuticals, a leading global pharmaceutical company. In this role, I manage stakeholder relationships, align IT strategy with business strategy, and oversee cluster members in the countries. I also lead the global rollout of Microsoft 365, a key initiative to enhance collaboration and productivity across the organization.</p>
+        <p class="mb-3">I have recently completed an MSc in IT and Digital Futures with a DevOps specialism pathway, and I hold certifications as a Scrum Master and Product Owner. I leverage my skills and knowledge in Lean and Agile principles, SAP solutions, process improvement, change management, project and programme management, and budget management to deliver innovative and impactful IT solutions that meet the needs and expectations of the business.</p>
+        <a href="http://linkedin.com/in/stuart-leach-86b37b9" class="btn btn-primary my-2">Connect on LinkedIn</a>
     </div>
 
+    <!-- Footer -->
     <footer class="text-center">
         <div class="social-links">
             <a href="https://www.instagram.com/stuartleach2" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
             <a href="https://photos.app.goo.gl/nrAaYCNykaptK5rf6" target="_blank"><i class="bi bi-image"></i> Google Prints</a>
+            <!-- Add more album links if needed -->
         </div>
         <p>&copy; 2024 Stuart Leach. All rights reserved.</p>
         <p>Special thanks to Bootstrap for providing design templates and to ChatGPT for assistance in content creation.</p>
