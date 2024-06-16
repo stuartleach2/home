@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Blog Post - Stuart Leach</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7; /* Light gray for background */
+        }
+        .container {
+            padding: 20px;
+        }
+        .blog-post {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-post-title {
+            font-size: 2rem;
+            color: #6f42c1; /* Purple title color */
+        }
+        .blog-post-meta {
+            font-size: 0.9rem;
+            color: #999;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #6f42c1;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #6f42c1; /* Purple background for footer */
+            color: white;
+            padding: 20px 0;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="text-black text-center py-4">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #6f42c1;">
+            <a class="navbar-brand" href="index.html">Stuart Leach Photography</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5 pt-5">
+        <a href="https://stuartleach2.github.io/home/blog.html" class="back-link"><i class="bi bi-arrow-left"></i> Back to Blog</a>
+
+        <div class="blog-post">
+            <h2 class="blog-post-title">My First Blog Post</h2>
+            <p class="blog-post-meta">June 18, 2024 by <a href="about.html">Stuart Leach</a></p>
+            
+            <p>Welcome to my first blog post! I’m excited to share my thoughts and experiences with you through this platform. In this post, I’ll be discussing some of my passions and hobbies, as well as a bit about my professional journey.</p>
+            
+            <h3>Photography: Capturing Moments</h3>
+            <p>Photography is one of my greatest passions. It allows me to capture and preserve moments in time, to tell stories through images, and to explore the world around me in a unique way. Whether I’m traveling to new places, exploring architectural wonders, or simply enjoying a day out with my family, my camera is always by my side.</p>
+            <img src="path/to/photo.jpg" alt="Example photo" class="img-fluid mb-3">
+            
+            <h3>Technology: Shaping the Future</h3>
+            <p>With over 20 years in IT leadership, I’ve had the opportunity to witness and contribute to incredible advancements in technology. I’m particularly interested in how technology can improve our lives and solve some of the world’s most pressing problems. In my current role, I focus on delivering IT solutions that support and enhance business strategies, with a keen eye on innovation and digital transformation.</p>
+            
+            <h3>Travel: Exploring New Horizons</h3>
+            <p>Traveling is a passion that goes hand in hand with my love for photography. There’s nothing quite like exploring new places, experiencing different cultures, and capturing the beauty of the world through my lens. Each journey offers a fresh perspective and new inspiration for my work and personal life.</p>
+            
+            <p>I hope you enjoyed this first post. Stay tuned for more updates, stories, and insights from my adventures in photography, technology, and beyond.</p>
+            
+            <p>Thank you for reading!</p>
+            <p><i>– Stuart Leach</i></p>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <div class="social-links">
+            <a href="https://www.instagram.com/stuartleach2" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+            <a href="https://www.threads.net/@stuartleach2" target="_blank"><i class="threads-icon"></i> Threads</a>
+        </div>
+        <p>&copy; 2024 Stuart Leach. All rights reserved.</p>
+        <p>Special thanks to Bootstrap for providing design templates and to ChatGPT for assistance in content creation.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        .threads-icon {
+            width: 1.2em;
+            height: 1.2em;
+            display: inline-block;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Threads_logo.svg/1200px-Threads_logo.svg.png') no-repeat center center;
+            background-size: contain;
+        }
+    </style>
+</body>
+</html>
