@@ -106,7 +106,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    
+    <!-- Send Email function -->
     <script>
         function sendEmail() {
             // Get the form values
@@ -116,7 +117,7 @@
             var message = document.getElementById('message').value;
 
             // Create the mailto link
-            var mailto_link = 'mailto:youremail@example.com' +
+            var mailto_link = 'mailto:stuart.leach2@gmail.com' +
                 '?subject=' + encodeURIComponent(subject) +
                 '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
 
