@@ -1,49 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Keeping Up with the Turtles</title>
-  <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keeping Up with the Turtles</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+        .container {
+            padding: 20px;
+        }
+        .blog-img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .blog-post {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-post-title {
+            font-size: 2rem;
+            color: #6f42c1;
+        }
+        .blog-post-meta {
+            font-size: 0.9rem;
+            color: #999;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #6f42c1;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #6f42c1;
+            color: white;
+            padding: 20px 0;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
+    <header class="text-black text-center py-4">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #6f42c1;">
+            <a class="navbar-brand" href="index.html">Stuart Leach Photography</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-<div class="blogpost">
-  <h1>Keeping Up with the Turtles</h1>
+    <div class="container mt-5 pt-5">
+        <a href="blog.html" class="back-link"><i class="bi bi-arrow-left"></i> Back to Blog</a>
 
-  <p>
-    Each time we return to Kefalonia, there’s one thing my wife looks forward to above all else: seeing the sea turtles in the harbour at Argostoli. It’s become a kind of pilgrimage — part ritual, part race — through the morning heat and dust, following her urgent stride toward the fishing boats, hoping to glimpse one before they slip away beneath the water. And so far, we’ve never been disappointed.
-  </p>
+        <div class="blog-post">
+            <h2 class="blog-post-title">Keeping Up with the Turtles</h2>
+            <p class="blog-post-meta">June 2025 by <a href="about.html">Stuart Leach</a></p>
 
-  <p>
-    The loggerhead turtles (<em>Caretta caretta</em>) that swim in Argostoli’s inner harbour are a local wonder. They’re drawn in by the returning fishing boats and the promise of scraps, gliding effortlessly between the hulls in the clear Ionian water. Some of them are tagged as part of conservation monitoring by <a href="https://www.wildlifesense.com" target="_blank">Wildlife Sense</a>, a local organisation helping protect these endangered creatures.
-  </p>
+            <p>Each time we return to Kefalonia, there’s one thing my wife looks forward to above all else: seeing the sea turtles in the harbour at Argostoli. It’s become a kind of pilgrimage — part ritual, part race — through the morning heat and dust, following her urgent stride toward the fishing boats, hoping to glimpse one before they slip away beneath the water. And so far, we’ve never been disappointed.</p>
 
-  <img src="../images/turtles/turtle1.jpg" alt="Loggerhead turtle in Argostoli harbour">
+            <p>The loggerhead turtles (<em>Caretta caretta</em>) that swim in Argostoli’s inner harbour are a local wonder. They’re drawn in by the returning fishing boats and the promise of scraps, gliding effortlessly between the hulls in the clear Ionian water. Some are tagged as part of conservation monitoring by <a href="https://www.wildlifesense.com" target="_blank">Wildlife Sense</a>, a local organisation helping protect these endangered creatures.</p>
 
-  <p>
-    For my wife, seeing them is more than a tradition — it lifts her, spiritually and emotionally. Even our children, who’d much prefer a slower start to the day, have learned to accept the early walk, tolerating the rising heat and dusty path with good humour (and a bit of eye-rolling) as we keep pace behind her.
-  </p>
+            <img src="images/turtles/turtle1.jpg" class="blog-img" alt="Loggerhead turtle in Argostoli harbour">
 
-  <p>
-    This time, I had an unexpected moment of connection. Walking alone along the harbour, I noticed a turtle swimming beside me — unhurried, companionable. It would occasionally dip under a fishing boat, then reappear again alongside me. At one point, it paused to circle with a pair of others before resuming its gentle glide.
-  </p>
+            <p>For my wife, seeing them is more than a tradition — it lifts her, spiritually and emotionally. Even our children, who’d much prefer a slower start to the day, have learned to accept the early walk, tolerating the rising heat and dusty path with good humour (and a bit of eye-rolling) as we keep pace behind her.</p>
 
-  <img src="../images/turtles/turtle2.jpg" alt="Turtle surfacing with sunlight glimmering on the water">
-  <img src="../images/turtles/turtle3.jpg" alt="Turtle swimming just under the surface">
-  
-  <p>
-    Eventually, we reached the stone wall at the end of the fishing market pier, where it began feeding — nibbling at algae clinging to the stone, I think. I was able to stand quietly and watch, uninterrupted, capturing a few photographs I’ll always treasure.
-  </p>
+            <p>This time, I had an unexpected moment of connection. Walking alone along the harbour, I noticed a turtle swimming beside me — unhurried, companionable. It would occasionally dip under a fishing boat, then reappear again alongside me. At one point, it paused to circle with a pair of others before resuming its gentle glide.</p>
 
-  <img src="../images/turtles/turtle4.jpg" alt="Close-up of a loggerhead turtle underwater">
-  <img src="../images/turtles/turtle5.jpg" alt="Turtle flipper detail in green water">
-  <img src="../images/turtles/turtle6.jpg" alt="Turtle feeding by the harbour wall">
+            <img src="images/turtles/turtle2.jpg" class="blog-img" alt="Turtle surfacing with sunlight glimmering on the water">
+            <img src="images/turtles/turtle3.jpg" class="blog-img" alt="Turtle swimming just under the surface">
 
-  <p>
-    As always, people gathered when they noticed — drawn in by the same wonder. But then, just as quietly, the moment resumed. The turtle and I moved on. It was a small journey, a simple one. But it felt like a privilege.
-  </p>
+            <p>Eventually, we reached the stone wall at the end of the fishing market pier, where it began feeding — nibbling at algae clinging to the stone, I think. I was able to stand quietly and watch, uninterrupted, capturing a few photographs I’ll always treasure.</p>
 
-</div>
+            <img src="images/turtles/turtle4.jpg" class="blog-img" alt="Close-up of a loggerhead turtle underwater">
+            <img src="images/turtles/turtle5.jpg" class="blog-img" alt="Turtle flipper detail in green water">
+            <img src="images/turtles/turtle6.jpg" class="blog-img" alt="Turtle feeding by the harbour wall">
 
+            <p>As always, people gathered when they noticed — drawn in by the same wonder. But then, just as quietly, the moment resumed. The turtle and I moved on. It was a small journey, a simple one. But it felt like a privilege.</p>
+
+            <p><i>– Stuart Leach</i></p>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="social-links">
+            <a href="https://www.instagram.com/stuartleach2" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+            <a href="https://www.threads.net/@stuartleach2" target="_blank"><i class="bi bi-threads"></i> Threads</a>
+        </div>
+        <p>&copy; 2025 Stuart Leach. All rights reserved.</p>
+        <p>Special thanks to Bootstrap for providing design templates and to ChatGPT for assistance in content creation.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
