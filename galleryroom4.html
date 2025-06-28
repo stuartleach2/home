@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Room 4 - Kefalonian Conversations</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+        .container {
+            padding: 20px;
+        }
+        .gallery img {
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .wide-image {
+            width: 100%;
+            height: auto;
+        }
+        .text-container,
+        .narrow-images {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #6f42c1;
+            color: white;
+            padding: 20px 0;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+        .custom-link {
+            text-decoration: none;
+            color: black;
+        }
+        .custom-link:hover {
+            color: #6f42c1;
+            text-decoration: underline;
+        }
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-black text-center py-4">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top" style="background-color: #6f42c1;">
+            <a class="navbar-brand" href="index.html">Stuart Leach Photography</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container content-container mt-5 pt-5">
+        <div class="card">
+            <div class="card-body">
+                <p class="text-muted mb-2"><a href="gallery.html" class="custom-link">Gallery</a></p>
+                <h2 class="mb-2">Kefalonian Conversations</h2>
+                <p>In this series, I pair each colourful Kefalonian moment with its black and white counterpart. These side-by-side images invite the viewer to slow down, notice the contrasts, and reflect on how different moods, memories, or stories emerge through light and tone. A quiet visual dialogue between colour and monochrome, modern life and timeless setting.</p>
+            </div>
+        </div>
+
+        <div class="text-container mb-4">
+            <div class="d-flex justify-content-left align-items-left mt-4 mb-4">
+                <img src="Snapseed.jpeg" alt="Stuart Leach" class="rounded-circle mr-3" style="width: 60px; height: 60px;">
+                <div class="text-left">
+                    <h6 class="mb-0"><a href="about.html" class="custom-link text-bold">Stuart Leach</a></h6>
+                    <p class="text-muted mb-0">June 28, 2025 &middot; 2 min read</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="narrow-images">
+                <img src="images/kefalonianconversations/exedra_color.jpg" alt="Exedra Taverna (colour)" class="img-fluid">
+                <img src="images/kefalonianconversations/exedra_bw.jpg" alt="Exedra Taverna (black and white)" class="img-fluid">
+                <p class="text-center mb-4"><small>Morning stillness outside Exedra Taverna</small></p>
+
+                <img src="images/kefalonianconversations/shop_color.jpg" alt="Shopfront (colour)" class="img-fluid">
+                <img src="images/kefalonianconversations/shop_bw.jpg" alt="Shopfront (black and white)" class="img-fluid">
+                <p class="text-center mb-4"><small>Sunlight and shade in a hidden square</small></p>
+
+                <img src="images/kefalonianconversations/church_color.jpg" alt="Church scene (colour)" class="img-fluid">
+                <img src="images/kefalonianconversations/church_bw.jpg" alt="Church scene (black and white)" class="img-fluid">
+                <p class="text-center mb-4"><small>Waiting outside the church</small></p>
+
+                <img src="images/kefalonianconversations/boat_color.jpg" alt="Boat on sand (colour)" class="img-fluid">
+                <img src="images/kefalonianconversations/boat_bw.jpg" alt="Boat on sand (black and white)" class="img-fluid">
+                <p class="text-center mb-4"><small>Beached boat facing the Ionian blue</small></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="social-links">
+            <a href="https://www.instagram.com/stuartleach2" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+            <a href="https://www.threads.net/@stuartleach2" target="_blank"><i class="bi bi-threads"></i> Threads</a>
+        </div>
+        <p>&copy; 2025 Stuart Leach. All rights reserved.</p>
+        <p>Special thanks to Bootstrap for providing design templates and to ChatGPT for assistance in content creation.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
