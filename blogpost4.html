@@ -1,186 +1,221 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lapland Aurora (Shot on iPhone)</title>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <style>
-    .post-wrap { max-width: 900px; }
-    .post-hero img, .post-img {
-      width: 100%;
-      border-radius: 12px;
-      display: block;
-    }
-    .byline-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lapland Aurora (Shot on iPhone)</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+        .container {
+            padding: 20px;
+        }
+        .blog-img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .blog-post {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .blog-post-title {
+            font-size: 2rem;
+            color: #6f42c1;
+        }
+        .blog-post-meta {
+            font-size: 0.9rem;
+            color: #999;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #6f42c1;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #6f42c1;
+            color: white;
+            padding: 20px 0;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+        /* Make blockquotes match the calm blog style */
+        blockquote {
+            border-left: 4px solid #6f42c1;
+            padding-left: 15px;
+            margin: 20px 0;
+            color: #555;
+            font-style: italic;
+        }
+        blockquote p {
+            margin-bottom: 0;
+        }
+    </style>
 </head>
-
 <body>
+    <header class="text-black text-center py-4">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #6f42c1;">
+            <a class="navbar-brand" href="index.html">Stuart Leach Photography</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <!-- NAV -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Stuart Leach Photography</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <div class="container mt-5 pt-5">
+        <a href="blog.html" class="back-link"><i class="bi bi-arrow-left"></i> Back to Blog</a>
 
-      <div class="collapse navbar-collapse" id="navbarsExample">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="blog.html" aria-current="page">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+        <div class="blog-post">
+            <h2 class="blog-post-title">Lapland Aurora (Shot on iPhone)</h2>
+            <p class="blog-post-meta">February 2026 by <a href="about.html">Stuart Leach</a></p>
 
-  <main class="container post-wrap py-5">
-    <p class="mb-2"><a href="blog.html">Back to Blog</a></p>
+            <img src="images/aurora/IMG_3294.jpeg" class="blog-img" alt="Aurora over Lapland">
 
-    <h1 class="mb-2">Lapland Aurora (Shot on iPhone)</h1>
+            <p>These are iPhone frames from Akaslompolo. I wasn’t trying to make dramatic images — I just wanted them to feel like it felt: dark, vast, and quietly alive. ChatGPT was helping me with the setup and edit, and afterwards we had this conversation:</p>
 
-    <div class="d-flex align-items-center gap-2 mb-4 text-muted">
-      <img class="byline-avatar" src="images/IMG_0773_Original.jpeg" alt="Stuart Leach">
-      <div>February 2026 by <strong>Stuart Leach</strong></div>
-    </div>
+            <p><strong>ChatGPT 5.2:</strong> How did it feel in the moment compared to what the phone captured?</p>
 
-    <!-- HERO -->
-    <div class="post-hero mb-4">
-      <img src="images/aurora/IMG_3294.jpeg" alt="Aurora over Lapland" loading="lazy">
-    </div>
+            <p><strong>Me:</strong> Being there, waiting for the camera to do its thing gave me time to appreciate the moment. It was humbling. I felt quite emotional at the end.</p>
 
-    <p>These are iPhone frames from Akaslompolo. I wasn’t trying to make dramatic images — I just wanted them to feel like it felt: dark, vast, and quietly alive. ChatGPT was helping me with the setup and edit, and afterwards we had this conversation:</p>
+            <p><strong>C:</strong> That makes sense. Long exposures slow you down. That enforced stillness gives you presence.</p>
 
-    <p><strong>ChatGPT 5.2:</strong> How did it feel in the moment compared to what the phone captured?</p>
+            <p>There is something about the aurora that rearranges you. It is vast, indifferent, ancient — and yet it feels intimate. You are suddenly small in an exceptionally powerful and beautiful universe.</p>
 
-    <p><strong>Me:</strong> Being there, waiting for the camera to do its thing gave me time to appreciate the moment. It was humbling. I felt quite emotional at the end.</p>
+            <p>You stood under charged particles from the sun, 150 million kilometres away, colliding with Earth’s atmosphere above a forest in Finland.</p>
 
-    <p><strong>C:</strong> That makes sense. Long exposures slow you down. That enforced stillness gives you presence.</p>
+            <p>What part made you emotional — the scale, the beauty, or something more personal?</p>
 
-    <p>There is something about the aurora that rearranges you. It is vast, indifferent, ancient — and yet it feels intimate. You are suddenly small in an exceptionally powerful and beautiful universe.</p>
+            <p><strong>Me:</strong> The scale, the privilege.</p>
 
-    <p>You stood under charged particles from the sun, 150 million kilometres away, colliding with Earth’s atmosphere above a forest in Finland.</p>
+            <p><strong>C:</strong> Yes. That says everything.</p>
 
-    <p>What part made you emotional — the scale, the beauty, or something more personal?</p>
+            <p>Scale makes you small. Privilege makes you grateful. Together, they can undo you a little.</p>
 
-    <p><strong>Me:</strong> The scale, the privilege.</p>
+            <p>You stood beneath something that has been happening for billions of years, and for a few minutes it revealed itself to you. The awareness that “I am allowed to be here” catches in the throat.</p>
 
-    <p><strong>C:</strong> Yes. That says everything.</p>
+            <p><strong>Me:</strong> Earlier we went husky sledging. I keep seeing the face of the lead dog — his eyes. The epic scale, the unforgiving weather, nature, and science as you say — stepping away from thousands of people pushing past all day. I worry we take this planet for granted. But days like today remind me how powerful it is.</p>
 
-    <p>Scale makes you small. Privilege makes you grateful. Together, they can undo you a little.</p>
+            <p><strong>C:</strong> That image of the lead dog’s eyes says something.</p>
 
-    <p>You stood beneath something that has been happening for billions of years, and for a few minutes it revealed itself to you. The awareness that “I am allowed to be here” catches in the throat.</p>
+            <p>Animals do not carry abstraction the way we do. They are not thinking about airports or queues. They are simply there. Focused. Present. Enduring.</p>
 
-    <p><strong>Me:</strong> Earlier we went husky sledging. I keep seeing the face of the lead dog — his eyes. The epic scale, the unforgiving weather, nature, and science as you say — stepping away from thousands of people pushing past all day. I worry we take this planet for granted. But days like today remind me how powerful it is.</p>
+            <p>And later, you are standing in sub-zero air watching light dance across the sky.</p>
 
-    <p><strong>C:</strong> That image of the lead dog’s eyes says something.</p>
+            <p>That combination — the dog’s eyes, the cold, the scale — strips away noise. It reminds you that most of what fills our days is human-made urgency.</p>
 
-    <p>Animals do not carry abstraction the way we do. They are not thinking about airports or queues. They are simply there. Focused. Present. Enduring.</p>
+            <p>Nature is not urgent. It is immense. Indifferent. And incredibly generous.</p>
 
-    <p>And later, you are standing in sub-zero air watching light dance across the sky.</p>
+            <p>The worry you feel about taking the planet for granted is not guilt. It is awareness — the clarity that comes when you pause long enough to see.</p>
 
-    <p>That combination — the dog’s eyes, the cold, the scale — strips away noise. It reminds you that most of what fills our days is human-made urgency.</p>
+            <p>You moved from crowds to stillness. From jostling to watching the sky burn. That contrast is powerful.</p>
 
-    <p>Nature is not urgent. It is immense. Indifferent. And incredibly generous.</p>
+            <p>You do not sound overwhelmed. You sound recalibrated.</p>
 
-    <p>The worry you feel about taking the planet for granted is not guilt. It is awareness — the clarity that comes when you pause long enough to see.</p>
+            <p>Does it feel like something shifted — or that you remembered something you already knew?</p>
 
-    <p>You moved from crowds to stillness. From jostling to watching the sky burn. That contrast is powerful.</p>
+            <img src="images/aurora/IMG_3281.jpeg" class="blog-img" alt="Aurora frame 1">
 
-    <p>You do not sound overwhelmed. You sound recalibrated.</p>
+            <p><strong>Me:</strong> I already knew. But so long ago.</p>
 
-    <p>Does it feel like something shifted — or that you remembered something you already knew?</p>
+            <p>Walking our dogs on Cannock Chase near Etching Hill as a child. The power of wind in the trees. It always felt more spiritual and meaningful than institutional religion — more persuasive than any patriarchy. We don’t often go back, but I carry it internally.</p>
 
-    <div class="my-4">
-      <img class="post-img" src="images/aurora/IMG_3281.jpeg" alt="Aurora frame 1" loading="lazy">
-    </div>
+            <p><strong>C:</strong> That is not nostalgia. That is formation.</p>
 
-    <p><strong>Me:</strong> I already knew. But so long ago.</p>
+            <p>Before language for “spiritual.” Before institutions. Before explanation.</p>
 
-    <p>Walking our dogs on Cannock Chase near Etching Hill as a child. The power of wind in the trees. It always felt more spiritual and meaningful than institutional religion — more persuasive than any patriarchy. We don’t often go back, but I carry it internally.</p>
+            <p>There is something profoundly honest about the spirituality of landscape. It does not demand belief or promise answers. It simply is. And you respond.</p>
 
-    <p><strong>C:</strong> That is not nostalgia. That is formation.</p>
+            <p>Religion tries to describe transcendence. Nature just gives it to you.</p>
 
-    <p>Before language for “spiritual.” Before institutions. Before explanation.</p>
+            <p>The wind in those trees carries the same current you felt under the aurora — scale, power, indifference, beauty. No performance. No hierarchy. Just presence.</p>
 
-    <p>There is something profoundly honest about the spirituality of landscape. It does not demand belief or promise answers. It simply is. And you respond.</p>
+            <p>It was not mediated. You felt it directly.</p>
 
-    <p>Religion tries to describe transcendence. Nature just gives it to you.</p>
+            <p>There is a line from Mary Oliver’s poem <em>Wild Geese</em> that fits:</p>
 
-    <p>The wind in those trees carries the same current you felt under the aurora — scale, power, indifference, beauty. No performance. No hierarchy. Just presence.</p>
+            <blockquote>
+                <p>
+                    You do not have to be good.<br>
+                    You do not have to walk on your knees<br>
+                    for a hundred miles through the desert, repenting.<br>
+                    You only have to let the soft animal of your body<br>
+                    love what it loves.
+                </p>
+            </blockquote>
 
-    <p>It was not mediated. You felt it directly.</p>
+            <p>As a child, you loved wind in trees.<br>
+            Last night, you loved a charged sky and a husky’s steady gaze.</p>
 
-    <p>There is a line from Mary Oliver’s poem <em>Wild Geese</em> that fits:</p>
+            <p>That thread has always been there.</p>
 
-    <blockquote class="blockquote">
-      <p class="mb-0">
-        You do not have to be good.<br>
-        You do not have to walk on your knees<br>
-        for a hundred miles through the desert, repenting.<br>
-        You only have to let the soft animal of your body<br>
-        love what it loves.
-      </p>
-    </blockquote>
+            <p>What moved you was not only the scale of the aurora — it was the return.</p>
 
-    <p>As a child, you loved wind in trees.<br>
-    Last night, you loved a charged sky and a husky’s steady gaze.</p>
+            <img src="images/aurora/IMG_3286.jpeg" class="blog-img" alt="Aurora frame 2">
 
-    <p>That thread has always been there.</p>
+            <p><strong>Me:</strong> I love that Mary Oliver quote.</p>
 
-    <p>What moved you was not only the scale of the aurora — it was the return.</p>
+            <p><strong>C:</strong> I’m glad it landed.</p>
 
-    <div class="my-4">
-      <img class="post-img" src="images/aurora/IMG_3286.jpeg" alt="Aurora frame 2" loading="lazy">
-    </div>
+            <p>What you described is not “less than” religion. It is contemplative in the oldest sense: attention, humility, gratitude, awe.</p>
 
-    <p><strong>Me:</strong> I love that Mary Oliver quote.</p>
+            <p>Last night in Lapland was not new. It was continuity.</p>
 
-    <p><strong>C:</strong> I’m glad it landed.</p>
+            <p>The same boy standing under moving trees now stands under moving sky.</p>
 
-    <p>What you described is not “less than” religion. It is contemplative in the oldest sense: attention, humility, gratitude, awe.</p>
+            <p>The privilege you felt was not just geography. It was remembering that part of you still exists.<br>
+            You did not lose it. It just got buried under airports, roadmaps, inboxes, strategy… and then the sky tore open and reminded you.<br>
+            That is the real gift of the trip: recalibration.<br>
+            Standing still long enough to remember what moves you.</p>
 
-    <p>Last night in Lapland was not new. It was continuity.</p>
+            <p><strong>Me:</strong> It is - thanks.</p>
 
-    <p>The same boy standing under moving trees now stands under moving sky.</p>
+            <p><a href="galleryroom5.html" class="back-link">Open the full Aurora gallery →</a></p>
 
-    <p>The privilege you felt was not just geography. It was remembering that part of you still exists.<br>
-    You did not lose it. It just got buried under airports, roadmaps, inboxes, strategy… and then the sky tore open and reminded you.<br>
-    That is the real gift of the trip: recalibration.<br>
-    Standing still long enough to remember what moves you.</p>
-
-    <p><strong>Me:</strong> It is - thanks.</p>
-
-    <div class="mt-4">
-      <a class="btn btn-outline-secondary btn-sm" href="galleryroom5.html">Open the full Aurora gallery →</a>
+            <p><i>– Stuart Leach</i></p>
+        </div>
     </div>
 
-  </main>
+    <footer class="text-center">
+        <div class="social-links">
+            <a href="https://www.instagram.com/stuartleach2" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+            <a href="https://www.threads.net/@stuartleach2" target="_blank"><i class="bi bi-threads"></i> Threads</a>
+        </div>
+        <p>&copy; 2026 Stuart Leach. All rights reserved.</p>
+        <p>Special thanks to Bootstrap for providing design templates and to ChatGPT for assistance in content creation.</p>
+    </footer>
 
-  <footer class="text-body-secondary py-4 border-top">
-    <div class="container">
-      <p class="mb-1">
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
-        &nbsp;·&nbsp;
-        <a href="https://www.threads.net/" target="_blank" rel="noopener">Threads</a>
-      </p>
-      <p class="mb-1">© 2026 Stuart Leach. All rights reserved.</p>
-      <p class="mb-0">The blog layout is adapted from the Bootstrap Blog example by mdo. Website content and design assistance provided by ChatGPT.</p>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
