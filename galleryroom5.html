@@ -60,11 +60,11 @@
       text-decoration: underline;
     }
 
-    /* Optional: make filename captions subtle */
+    /* Caption style */
     .img-caption {
       text-align: center;
       color: #666;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       margin-top: -6px;
       margin-bottom: 18px;
     }
@@ -130,27 +130,26 @@
   </footer>
 
   <script>
-    // Your exact filenames in /images/aurora/
-    const auroraFiles = [
-      "IMG_3281.jpeg",
-      "IMG_3282.jpeg",
-      "IMG_3285.jpeg",
-      "IMG_3286.jpeg",
-      "IMG_3287.jpeg",
-      "IMG_3292.jpeg",
-      "IMG_3294.jpeg",
-      "Snapseed.jpeg"
+    // File + short caption (5–6 words max)
+    const auroraItems = [
+      { file: "IMG_3281.jpeg", caption: "From the hotel car park, looking west." },
+      { file: "IMG_3282.jpeg", caption: "Due west, portrait." },
+      { file: "IMG_3285.jpeg", caption: "Due west, landscape." },
+      { file: "IMG_3286.jpeg", caption: "Due west again" },
+      { file: "IMG_3287.jpeg", caption: "Facing east." },
+      { file: "IMG_3292.jpeg", caption: "Facing north." },
+      { file: "IMG_3294.jpeg", caption: "North by north east." },
+      { file: "Snapseed.jpeg", caption: "Finally, back to the west." }
     ];
 
     const gallery = document.getElementById("auroraGallery");
 
-    // No cropping: use natural aspect ratio (img-fluid + height:auto)
-    auroraFiles.forEach((file) => {
-      const src = `images/aurora/${file}`;
+    auroraItems.forEach((item) => {
+      const src = `images/aurora/${item.file}`;
 
       gallery.insertAdjacentHTML("beforeend", `
-        <img src="${src}" alt="${file}" class="gallery-img img-fluid">
-        <div class="img-caption">${file}</div>
+        <img src="${src}" alt="${item.file}" class="gallery-img img-fluid">
+        <div class="img-caption">${item.caption}</div>
       `);
     });
   </script>
