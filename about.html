@@ -32,21 +32,27 @@
       background-color: var(--brand-purple) !important;
     }
 
+    /* HERO WRAPPER (rounded + clips background image cleanly) */
+    .hero-shell{
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+      background: #111; /* fallback */
+    }
+
     /* HERO WITH IMAGE */
     .hero-image{
       position: relative;
       background: url("images/aurora/nikon/Landscapes/DSC_0036-Edit_Original.jpeg") center center / cover no-repeat;
-      height: 62vh;
-      min-height: 420px;
+      height: 56vh;
+      min-height: 380px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: white;
-      border-bottom-left-radius: 18px;
-      border-bottom-right-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+      padding: 24px 16px;
     }
 
     .hero-overlay{
@@ -59,18 +65,25 @@
       position: relative;
       z-index: 2;
       max-width: 860px;
-      padding: 22px;
+      padding: 8px 10px;
+    }
+
+    .kicker{
+      color: rgba(255,255,255,.85);
+      font-size: .95rem;
+      letter-spacing: .2px;
+      margin-bottom: 8px;
     }
 
     .hero-content h1{
       font-weight: 800;
       letter-spacing: .2px;
-      font-size: 2.7rem;
+      font-size: 2.5rem;
       margin-bottom: 12px;
     }
 
     .hero-content p{
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       line-height: 1.65;
       margin: 0 auto;
       max-width: 720px;
@@ -90,18 +103,45 @@
       background: rgba(255,255,255,.12);
     }
 
-    /* Profile image overlaps hero */
-    .profile-wrap{
-      margin-top: -70px;
+    /* PROFILE + META STRIP (below hero, no overlap) */
+    .below-hero{
+      margin-top: -28px; /* gentle tuck under the hero edge */
+      position: relative;
+      z-index: 3;
     }
+
     .profile-img{
-      width: 140px;
-      height: 140px;
+      width: 120px;
+      height: 120px;
       object-fit: cover;
       border-radius: 50%;
       border: 4px solid #fff;
-      box-shadow: 0 12px 26px rgba(0,0,0,.22);
+      box-shadow: 0 12px 26px rgba(0,0,0,.18);
       background: #fff;
+    }
+
+    .meta-row{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .meta-pill{
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 999px;
+      padding: 8px 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,.04);
+      font-size: .95rem;
+      color: #2b2b2b;
+      white-space: nowrap;
+    }
+
+    .meta-pill i{
+      color: var(--brand-purple);
+      margin-right: 8px;
     }
 
     /* Cards */
@@ -112,33 +152,6 @@
       box-shadow: var(--shadow);
     }
 
-    .kicker{
-      color: var(--muted);
-      font-size: .95rem;
-      letter-spacing: .2px;
-    }
-
-    .meta-row{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 14px;
-    }
-    .meta-pill{
-      background: #fff;
-      border: 1px solid rgba(0,0,0,.08);
-      border-radius: 999px;
-      padding: 8px 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,.04);
-      font-size: .95rem;
-      color: #2b2b2b;
-    }
-    .meta-pill i{
-      color: var(--brand-purple);
-      margin-right: 8px;
-    }
-
     /* Footer */
     footer{
       background-color: var(--brand-purple);
@@ -146,6 +159,7 @@
       padding: 20px 0;
       margin-top: 40px;
     }
+
     .social-links a{
       color: white;
       margin: 0 10px;
@@ -162,9 +176,11 @@
     a:hover{ color: #5b34a3; }
 
     @media (max-width: 768px){
-      .hero-content h1{ font-size: 2.1rem; }
-      .hero-content p{ font-size: 1.05rem; }
-      .hero-image{ height: 58vh; }
+      .hero-image{ height: 52vh; min-height: 340px; }
+      .hero-content h1{ font-size: 2.05rem; }
+      .hero-content p{ font-size: 1.03rem; }
+      .btn.btn-lg{ padding: .65rem 1rem; font-size: 1rem; }
+      .below-hero{ margin-top: -22px; }
     }
   </style>
 </head>
@@ -191,25 +207,34 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero-image">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="kicker mb-2" style="color: rgba(255,255,255,.85);">About this site</div>
-      <h1>On noticing</h1>
-      <p>
-        I photograph places that ask for a slower pace —
-        light, weather, distance, and the quiet between moments.
-        This is mostly a record of what I didn’t want to rush past.
-      </p>
+  <div class="hero-shell">
+    <section class="hero-image">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="kicker">About this site</div>
+        <h1>On noticing</h1>
+        <p>
+          I photograph places that ask for a slower pace —
+          light, weather, distance, and the quiet between moments.
+          This is mostly a record of what I didn’t want to rush past.
+        </p>
 
-      <div class="mt-4">
-        <a href="gallery.html" class="btn btn-brand btn-lg mr-2">
-          <i class="bi bi-images mr-2"></i>View Gallery
-        </a>
-        <a href="blog.html" class="btn btn-outline-light btn-lg">
-          <i class="bi bi-journal-text mr-2"></i>Read the Blog
-        </a>
+        <div class="mt-4">
+          <a href="gallery.html" class="btn btn-brand btn-lg mr-2 mb-2">
+            <i class="bi bi-images mr-2"></i>View Gallery
+          </a>
+          <a href="blog.html" class="btn btn-outline-light btn-lg mb-2">
+            <i class="bi bi-journal-text mr-2"></i>Read the Blog
+          </a>
+        </div>
       </div>
+    </section>
+  </div>
+
+  <!-- PROFILE + META (moved out of hero to avoid collision on mobile) -->
+  <div class="below-hero">
+    <div class="container text-center">
+      <img src="Snapseed.jpeg" alt="Stuart Leach" class="profile-img" />
 
       <div class="meta-row">
         <span class="meta-pill"><i class="bi bi-geo-alt"></i>North Yorkshire</span>
@@ -217,11 +242,6 @@
         <span class="meta-pill"><i class="bi bi-moon-stars"></i>Minimal • Atmospheric</span>
       </div>
     </div>
-  </section>
-
-  <!-- PROFILE IMAGE (optional, keeps your original) -->
-  <div class="text-center profile-wrap">
-    <img src="Snapseed.jpeg" alt="Stuart Leach" class="profile-img">
   </div>
 
   <!-- MAIN CONTENT -->
@@ -229,7 +249,6 @@
     <div class="row">
       <div class="col-lg-9 mx-auto">
 
-        <!-- Main: understated, not boastful -->
         <div class="card section-card mb-4">
           <div class="card-body p-4">
             <h2 class="h4 mb-3" style="font-weight:800;">What you’ll find here</h2>
@@ -247,7 +266,6 @@
           </div>
         </div>
 
-        <!-- Secondary: a tiny bit of “me” without the CV -->
         <div class="card section-card mb-4">
           <div class="card-body p-4">
             <h2 class="h4 mb-3" style="font-weight:800;">A small note</h2>
@@ -275,7 +293,6 @@
           </div>
         </div>
 
-        <!-- Gentle CTA -->
         <div class="card section-card">
           <div class="card-body p-4 text-center">
             <h3 class="h5 mb-2" style="font-weight:800;">If you’d like to get in touch</h3>
