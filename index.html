@@ -9,17 +9,18 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Bootstrap Icons CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <!-- AOS CSS -->
+  <!-- AOS CSS (keep just one) -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
   <link rel="stylesheet" href="dist/css/styles.css" />
 
   <style>
     html {
       scroll-behavior: smooth;
     }
+
     body {
-      background: 
+      background:
         linear-gradient(rgba(50, 80, 160, 0.6), rgba(50, 80, 160, 0.6)),
         url('images/kefalonia/blank.jpeg') no-repeat center center fixed;
       background-size: cover;
@@ -28,11 +29,13 @@
       color: #ffffff;
       padding-top: 70px;
     }
+
     .gallery {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     .gallery img {
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -41,66 +44,87 @@
       max-width: 600px;
       margin-bottom: 30px;
     }
+
     .gallery img:hover {
       transform: scale(1.05);
     }
+
     .hero {
       min-height: 100vh;
     }
+
     footer {
       background-color: rgba(0, 0, 0, 0.6);
       color: white;
       padding: 20px 0;
     }
+
     .social-links a {
       color: white;
       margin: 0 10px;
       font-size: 1.2em;
       text-decoration: none;
     }
+
     .navbar-custom {
       background-color: #6f42c1;
+      transition: box-shadow 0.2s ease;
     }
+
+    .navbar-scrolled {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
     .nav-link {
       font-size: 1rem;
     }
-    h2, p {
+
+    h2, p, h4 {
       color: #ffffff;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
     }
+
+    /* Bouncing chevron */
     .bouncing-chevron {
-  	font-size: 2rem;
-  	animation: bounce 2s infinite;
-  	display: inline-block;
-  	margin-top: 20px;
-  	color: white;
-     }
-     @keyframes bounce {
-  	0%, 20%, 50%, 80%, 100% {
-    	   transform: translateY(0); 
-        }
-        40% {
-    	   transform: translateY(-10px); 
-        }
-        60% {
-    	   transform: translateY(-5px); 
-        }
-      }
+      font-size: 2rem;
+      animation: bounce 2s infinite;
+      display: inline-block;
+      margin-top: 20px;
+      color: white;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+
+    /* Glass CTA panel */
+    .glass-card {
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 14px;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .btn-ghost {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.16);
+      color: #fff;
+    }
+
+    .section-pad { padding: 28px 0; }
+
+    /* Make chevron link not look like a link */
+    .scroll-link:hover { text-decoration: none; }
   </style>
-	
-  <script>
-  	document.querySelectorAll('.scroll-link').forEach(link => {
-    	   link.addEventListener('click', function(e) {
-      		e.preventDefault();
-      		const target = document.querySelector(this.getAttribute('href'));
-      		window.scrollTo({
-        		top: target.offsetTop,
-        		behavior: 'smooth'
-      		});
-    	  });
-  	});
-   </script>
-	
 </head>
 
 <body>
@@ -126,31 +150,60 @@
     <p class="mb-4" data-aos="fade-up" data-aos-delay="800">
       Built on an iPhone while sat on a sun lounger in the hills overlooking Agia Effimia in Kefalonia, from code written by GPT-4o.
     </p>
+
     <span class="hero__scroll" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
-	<br>
-  <i class="bi bi-chevron-double-down bouncing-chevron"data-aos="fade-up" data-aos-delay="400"></i>
+      <br>
+      <!-- Chevron now scrolls to the gallery -->
+      <a class="scroll-link" href="#start" aria-label="Scroll to gallery">
+        <i class="bi bi-chevron-double-down bouncing-chevron" data-aos="fade-up" data-aos-delay="400"></i>
+      </a>
     </span>
   </div>
+
+  <!-- Anchor for smooth scroll target -->
+  <div id="start"></div>
 
   <!-- Vertical Gallery -->
   <div class="container gallery">
     <div data-aos="fade-up-right" data-aos-delay="400" class="w-100 d-flex justify-content-start ml-10 mb-5">
-      <img src="images/kefalonia/FullSizeRender.jpeg" alt="Agia Effimia from Villa Remvi" class="img-fluid" style="max-width: 400px;" />
+      <img loading="lazy" src="images/kefalonia/FullSizeRender.jpeg" alt="Agia Effimia from Villa Remvi" class="img-fluid" style="max-width: 400px;" />
     </div>
+
     <div data-aos="fade-up-left" data-aos-delay="800" class="w-100 d-flex justify-content-end mr-10 mb-5">
-      <img src="images/aurora/nikon/DSC_0076-Edit-2_Original.jpeg" alt="Northern Lights, Akaslompolo" class="img-fluid" style="max-width: 400px;" />
+      <img loading="lazy" src="images/aurora/nikon/DSC_0076-Edit-2_Original.jpeg" alt="Northern Lights, Akaslompolo" class="img-fluid" style="max-width: 400px;" />
     </div>
+
+    <!-- CTA PANEL (between image pairs) -->
+    <div class="container section-pad" data-aos="fade-up" data-aos-delay="200">
+      <div class="glass-card p-4 text-center">
+        <h4 class="mb-2">Explore</h4>
+        <p class="mb-3">Browse the gallery, or read the stories behind the images.</p>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-center">
+          <a class="btn btn-light mr-sm-2 mb-2 mb-sm-0" href="gallery.html">
+            <i class="bi bi-grid-3x3-gap mr-1"></i> Gallery
+          </a>
+          <a class="btn btn-ghost" href="blog.html">
+            <i class="bi bi-journal-text mr-1"></i> Blog
+          </a>
+        </div>
+      </div>
+    </div>
+
     <div data-aos="fade-up-right" data-aos-delay="800" class="w-100 d-flex justify-content-start ml-10 mb-5">
-      <img src="images/waterfalls/Scale Haw Force 2.jpg" alt="Scale Haw Force" class="img-fluid" style="max-width: 400px;" />
+      <img loading="lazy" src="images/waterfalls/Scale Haw Force 2.jpg" alt="Scale Haw Force" class="img-fluid" style="max-width: 400px;" />
     </div>
+
     <div data-aos="fade-up-left" data-aos-delay="800" class="w-100 d-flex justify-content-end mr-10 mb-5">
-      <img src="images/kefalonia/Image (102).jpg" alt="Sunset on Kaminia beach (1)" class="img-fluid" style="max-width: 400px;" />
+      <img loading="lazy" src="images/kefalonia/Image (102).jpg" alt="Sunset on Kaminia beach (1)" class="img-fluid" style="max-width: 400px;" />
     </div>
+
     <div data-aos="fade-up-right" data-aos-delay="800" class="w-100 d-flex justify-content-start ml-10 mb-5">
-      <img src="images/kefalonia/Image (112).jpg" alt="Sunset on Kaminia beach (2)" class="img-fluid" style="max-width: 400px;" />
+      <img loading="lazy" src="images/kefalonia/Image (112).jpg" alt="Sunset on Kaminia beach (2)" class="img-fluid" style="max-width: 400px;" />
     </div>
+
     <div data-aos="fade-up-left" data-aos-delay="800" class="w-100 d-flex justify-content-end mr-10 mb-5">
-      <img src="images/aurora/nikon/Landscapes/DSC_0034-Edit_Original.jpeg" alt="Sunset on Lake Akaslompolo (Finland)" class="img-fluid" style="max-width: 400px;" />
+      <img loading="lazy" src="images/aurora/nikon/Landscapes/DSC_0034-Edit_Original.jpeg" alt="Sunset on Lake Akaslompolo (Finland)" class="img-fluid" style="max-width: 400px;" />
     </div>
   </div>
 
@@ -164,10 +217,36 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
   <script>
+    // AOS init
     AOS.init({
       duration: 800,
       once: true
+    });
+
+    // Smooth scroll for chevron + any future .scroll-link anchors
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.scroll-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (!href || !href.startsWith('#')) return;
+
+          const target = document.querySelector(href);
+          if (!target) return;
+
+          e.preventDefault();
+          const y = target.getBoundingClientRect().top + window.pageYOffset - 70; // navbar offset
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        });
+      });
+    });
+
+    // Subtle navbar shadow on scroll (premium feel)
+    window.addEventListener('scroll', function () {
+      const nav = document.querySelector('.navbar');
+      if (!nav) return;
+      nav.classList.toggle('navbar-scrolled', window.scrollY > 10);
     });
   </script>
 </body>
