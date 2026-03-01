@@ -13,19 +13,11 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
 
   <style>
-    body {
-      background-color: #ffffff;
-    }
-
-    .container {
-      padding: 20px;
-    }
+    body { background-color: #ffffff; }
+    .container { padding: 20px; }
 
     /* Match your Room 4 layout sizing */
-    .content-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
+    .content-container { max-width: 800px; margin: 0 auto; }
 
     /* IMPORTANT: no fixed heights, no object-fit cover -> no cropping */
     .gallery-img {
@@ -37,28 +29,11 @@
       display: block;
     }
 
-    footer {
-      background-color: #6f42c1;
-      color: white;
-      padding: 20px 0;
-    }
+    footer { background-color: #6f42c1; color: white; padding: 20px 0; }
+    .social-links a { color: white; margin: 0 10px; font-size: 1.2em; text-decoration: none; }
 
-    .social-links a {
-      color: white;
-      margin: 0 10px;
-      font-size: 1.2em;
-      text-decoration: none;
-    }
-
-    .custom-link {
-      text-decoration: none;
-      color: black;
-    }
-
-    .custom-link:hover {
-      color: #6f42c1;
-      text-decoration: underline;
-    }
+    .custom-link { text-decoration: none; color: black; }
+    .custom-link:hover { color: #6f42c1; text-decoration: underline; }
 
     /* Caption style */
     .img-caption {
@@ -76,15 +51,9 @@
       font-size: 1.35rem;
     }
 
-    .section-intro {
-      color: #666;
-      margin-bottom: 18px;
-    }
+    .section-intro { color: #666; margin-bottom: 18px; }
 
-    .divider {
-      border-top: 1px solid #e6e6e6;
-      margin: 24px 0;
-    }
+    .divider { border-top: 1px solid #e6e6e6; margin: 24px 0; }
   </style>
 </head>
 
@@ -122,7 +91,7 @@
 
     <div class="text-container mb-4">
       <div class="d-flex justify-content-left align-items-left mt-4 mb-4">
-        <!-- Updated path to match your aurora folder -->
+        <!-- Keep as you have it now -->
         <img src="Snapseed.jpeg" alt="Stuart Leach" class="rounded-circle mr-3" style="width: 60px; height: 60px;">
         <div class="text-left">
           <h6 class="mb-0"><a href="about.html" class="custom-link text-bold">Stuart Leach</a></h6>
@@ -132,7 +101,6 @@
     </div>
 
     <div class="gallery">
-      <!-- Images will be injected here -->
       <div id="auroraGallery"></div>
     </div>
   </div>
@@ -147,7 +115,7 @@
   </footer>
 
   <script>
-    // Nikon section (from /images/aurora/nikon/)
+    // Nikon aurora section (from /images/aurora/nikon/)
     const nikonItems = [
       { file: "DSC_0074-Edit_Original.jpeg", caption: "First serious frame, Nikon" },
       { file: "DSC_0076-Edit-2_Original.jpeg", caption: "Ribbons forming over treeline" },
@@ -159,7 +127,7 @@
       { file: "DSC_0083-Edit_Original.jpeg", caption: "Last Nikon frame, lingering" }
     ];
 
-    // iPhone section (from /images/aurora/)
+    // iPhone aurora section (from /images/aurora/)
     const iphoneItems = [
       { file: "IMG_3281.jpeg", caption: "From the hotel car park, looking west." },
       { file: "IMG_3282.jpeg", caption: "Due west, portrait." },
@@ -169,6 +137,13 @@
       { file: "IMG_3292.jpeg", caption: "Facing north." },
       { file: "IMG_3294.jpeg", caption: "North by north east." },
       { file: "Snapseed.jpeg", caption: "Finally, back to the west." }
+    ];
+
+    // Lapland landscapes section (from /images/aurora/nikon/Landscapes/)
+    const landscapeItems = [
+      { file: "DSC_0034-Edit_Original.jpeg", caption: "Snow-laden forest, still light" },
+      { file: "DSC_0036-Edit_Original.jpeg", caption: "Winter track through trees" },
+      { file: "DSC_0124-Edit_Original.jpeg", caption: "Reindeer at forest edge" }
     ];
 
     const gallery = document.getElementById("auroraGallery");
@@ -200,6 +175,23 @@
 
     iphoneItems.forEach((item) => {
       const src = `images/aurora/${item.file}`;
+      gallery.insertAdjacentHTML("beforeend", `
+        <img src="${src}" alt="${item.file}" class="gallery-img img-fluid">
+        <div class="img-caption">${item.caption}</div>
+      `);
+    });
+
+    // --- Landscapes at the bottom ---
+    gallery.insertAdjacentHTML("beforeend", `
+      <div class="divider"></div>
+      <h3 class="section-title">Lapland Landscapes</h3>
+      <p class="section-intro">
+        A few quiet frames from daytime — the same stillness, just in snow and soft light.
+      </p>
+    `);
+
+    landscapeItems.forEach((item) => {
+      const src = `images/aurora/nikon/Landscapes/${item.file}`;
       gallery.insertAdjacentHTML("beforeend", `
         <img src="${src}" alt="${item.file}" class="gallery-img img-fluid">
         <div class="img-caption">${item.caption}</div>
