@@ -68,6 +68,23 @@
       margin-top: -6px;
       margin-bottom: 18px;
     }
+
+    .section-title {
+      color: #6f42c1;
+      margin-top: 10px;
+      margin-bottom: 6px;
+      font-size: 1.35rem;
+    }
+
+    .section-intro {
+      color: #666;
+      margin-bottom: 18px;
+    }
+
+    .divider {
+      border-top: 1px solid #e6e6e6;
+      margin: 24px 0;
+    }
   </style>
 </head>
 
@@ -96,23 +113,23 @@
       <div class="card-body">
         <p class="text-muted mb-2"><a href="gallery.html" class="custom-link">Gallery</a></p>
         <h2 class="mb-2">Lapland Aurora</h2>
-        <p>iPhone aurora frames from Akaslompolo. Quiet, cold, and completely unreal.</p>
+        <p>Nikon D3500 frames followed by iPhone frames from Akaslompolo. Quiet, cold, and completely unreal.</p>
         <p class="mb-0">
           <a href="blogpost4.html" class="custom-link">Read the blog post</a> for the story behind the night.
         </p>
       </div>
     </div>
-        
-        <div class="text-container mb-4">
-            <div class="d-flex justify-content-left align-items-left mt-4 mb-4">
-                <img src="Snapseed.jpeg" alt="Stuart Leach" class="rounded-circle mr-3" style="width: 60px; height: 60px;">
-                <div class="text-left">
-                    <h6 class="mb-0"><a href="about.html" class="custom-link text-bold">Stuart Leach</a></h6>
-                    <p class="text-muted mb-0">February 2026 &middot; 2 min read</p>
-                </div>
-            </div>
+
+    <div class="text-container mb-4">
+      <div class="d-flex justify-content-left align-items-left mt-4 mb-4">
+        <!-- Updated path to match your aurora folder -->
+        <img src="images/aurora/Snapseed.jpeg" alt="Stuart Leach" class="rounded-circle mr-3" style="width: 60px; height: 60px;">
+        <div class="text-left">
+          <h6 class="mb-0"><a href="about.html" class="custom-link text-bold">Stuart Leach</a></h6>
+          <p class="text-muted mb-0">February 2026 &middot; 2 min read</p>
         </div>
-        
+      </div>
+    </div>
 
     <div class="gallery">
       <!-- Images will be injected here -->
@@ -130,8 +147,20 @@
   </footer>
 
   <script>
-    // File + short caption (5–6 words max)
-    const auroraItems = [
+    // Nikon section (from /images/aurora/nikon/)
+    const nikonItems = [
+      { file: "DSC_0074-Edit_Original.jpeg", caption: "First serious frame, Nikon" },
+      { file: "DSC_0076-Edit-2_Original.jpeg", caption: "Ribbons forming over treeline" },
+      { file: "DSC_0077-Edit_Original.jpeg", caption: "Green arc, deeper contrast" },
+      { file: "DSC_0078-Edit_Original.jpeg", caption: "Quiet sky, faint movement" },
+      { file: "DSC_0079-Edit_Original.jpeg", caption: "Brighter band, shifting light" },
+      { file: "DSC_0080-Edit_Original.jpeg", caption: "Cold silence, wide sky" },
+      { file: "DSC_0082-Edit_Original.jpeg", caption: "Airglow and aurora together" },
+      { file: "DSC_0083-Edit_Original.jpeg", caption: "Last Nikon frame, lingering" }
+    ];
+
+    // iPhone section (from /images/aurora/)
+    const iphoneItems = [
       { file: "IMG_3281.jpeg", caption: "From the hotel car park, looking west." },
       { file: "IMG_3282.jpeg", caption: "Due west, portrait." },
       { file: "IMG_3285.jpeg", caption: "Due west, landscape." },
@@ -144,9 +173,35 @@
 
     const gallery = document.getElementById("auroraGallery");
 
-    auroraItems.forEach((item) => {
-      const src = `images/aurora/${item.file}`;
+    // --- Nikon intro ---
+    gallery.insertAdjacentHTML("beforeend", `
+      <h3 class="section-title">Nikon D3500</h3>
+      <p class="section-intro">
+        These are the Nikon frames — longer exposures and a bit more detail in the sky.
+        (Files in <code>images/aurora/nikon/</code>)
+      </p>
+    `);
 
+    nikonItems.forEach((item) => {
+      const src = `images/aurora/nikon/${item.file}`;
+      gallery.insertAdjacentHTML("beforeend", `
+        <img src="${src}" alt="${item.file}" class="gallery-img img-fluid">
+        <div class="img-caption">${item.caption}</div>
+      `);
+    });
+
+    // --- Transition ---
+    gallery.insertAdjacentHTML("beforeend", `
+      <div class="divider"></div>
+      <h3 class="section-title">iPhone frames</h3>
+      <p class="section-intro">
+        And then the iPhone frames — quicker, simpler, and closer to what it felt like in the moment.
+        (Files in <code>images/aurora/</code>)
+      </p>
+    `);
+
+    iphoneItems.forEach((item) => {
+      const src = `images/aurora/${item.file}`;
       gallery.insertAdjacentHTML("beforeend", `
         <img src="${src}" alt="${item.file}" class="gallery-img img-fluid">
         <div class="img-caption">${item.caption}</div>
