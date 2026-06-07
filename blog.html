@@ -77,59 +77,13 @@
         <div class="row">
             <div class="col-md-8">
 
-                <!-- NEW: BLOG POST 4 (AURORA) -->
-                <div class="card mb-4">
-                   <img class="img-thumbnail" src="images/aurora/IMG_3294.jpeg" alt="Lapland aurora (iPhone)" style="width: 50%; height: auto;">
-                   <div class="card-body">
-                       <h2 class="card-title"><a href="blogpost4.html">Lapland Aurora (Akaslompolo)</a></h2>
-                       <p class="card-text">We waited in the snow while the camera worked. Above us, the sky moved with a scale that made everything else feel quiet. I felt small — humble and strangely grateful to be so small.</p>
-                       <a href="blogpost4.html" class="btn btn-primary" style="background-color: #6f42c1;">Read More &rarr;</a>
-                   </div>
-                   <div class="card-footer text-muted">
-                       Posted February 2026 by <a href="about.html">Stuart Leach</a>
-                   </div>
-                </div>
-
-                <!-- BLOG POST 3 -->
-                <div class="card mb-4">
-                   <img class="img-thumbnail" src="images/turtles/turtle1.jpg" alt="Loggerhead turtle in Argostoli harbour" style="width: 50%; height: auto;">
-                   <div class="card-body">
-                       <h2 class="card-title"><a href="blogpost3.html">Keeping Up with the Turtles</a></h2>
-                       <p class="card-text">A quiet encounter with loggerhead turtles in Argostoli, and how they’ve become a joyful family tradition during our visits to Kefalonia.</p>
-                       <a href="blogpost3.html" class="btn btn-primary" style="background-color: #6f42c1;">Read More &rarr;</a>
-                       </div>
-                       <div class="card-footer text-muted">
-                           Posted June 2025 by <a href="about.html">Stuart Leach</a>
-                       </div>
-                </div>
-                
-                <!-- BLOG POST 2 -->
-                <div class="card mb-4">
-                    <img class="img-thumbnail" src="rendlesham.jpeg" alt="Rendlesham Forest" style="width: 50%; height: auto;">
+                <p id="blog-active-filter" class="text-muted">Showing all posts</p>
+                <div id="blog-posts"></div>
+                <div id="blog-empty-state" class="card mb-4" style="display: none;">
                     <div class="card-body">
-                        <h2 class="card-title"><a href="blogpost2.html">Lovecraft Investigations</a></h2>
-                        <p class="card-text">A Lovecraftian Holiday: Exploring Suffolk's Spooky Side inspired by the works of Julian Simpson.</p>
-                        <a href="blogpost2.html" class="btn btn-primary" style="background-color: #6f42c1;">Read More &rarr;</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Posted August 2024 by <a href="about.html">Stuart Leach</a>
+                        No blog posts match your filters.
                     </div>
                 </div>
-
-                <!-- BLOG POST 1 -->
-                <div class="card mb-4">
-                    <img class="img-thumbnail" src="images/kefalonia/FullSizeRender.jpeg" alt="Agia Effimia" style="width: 50%; height: auto;">
-                    <div class="card-body">
-                        <h2 class="card-title"><a href="blogpost1.html">Agia Effimia</a></h2>
-                        <p class="card-text">How this site came to be built using only an iPhone at 6am while sat on a sun lounger in the hills overlooking Agia Effimia in Kefalonia, from code written by GPT-4o.</p>
-                        <a href="blogpost1.html" class="btn btn-primary" style="background-color: #6f42c1;">Read More &rarr;</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Posted June 2024 by <a href="about.html">Stuart Leach</a>
-                    </div>
-                </div>
-
-                <!-- Add more blog posts as needed -->
             </div>
 
             <!-- Sidebar Widgets Column -->
@@ -139,9 +93,9 @@
                     <h5 class="card-header">Search</h5>
                     <div class="card-body">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for...">
+                            <input id="blog-search" type="text" class="form-control" placeholder="Search for..." aria-label="Search blog posts">
                             <span class="input-group-append">
-                                <button class="btn btn-primary" type="button" style="background-color: #6f42c1;">Go!</button>
+                                <button id="blog-search-button" class="btn btn-primary" type="button" style="background-color: #6f42c1;">Go!</button>
                             </span>
                         </div>
                     </div>
@@ -151,30 +105,35 @@
                 <div class="card my-4">
                     <h5 class="card-header">Categories</h5>
                     <div class="card-body">
+                        <ul class="list-unstyled mb-3">
+                            <li>
+                                <a href="blog.html" data-blog-category="">All Posts</a>
+                            </li>
+                        </ul>
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="#">Photography</a>
+                                        <a href="blog.html?category=Photography" data-blog-category="Photography">Photography</a>
                                     </li>
                                     <li>
-                                        <a href="#">Travel</a>
+                                        <a href="blog.html?category=Travel" data-blog-category="Travel">Travel</a>
                                     </li>
                                     <li>
-                                        <a href="#">Architecture</a>
+                                        <a href="blog.html?category=Architecture" data-blog-category="Architecture">Architecture</a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="#">Technology</a>
+                                        <a href="blog.html?category=Technology" data-blog-category="Technology">Technology</a>
                                     </li>
                                     <li>
-                                        <a href="#">Reading</a>
+                                        <a href="blog.html?category=Reading" data-blog-category="Reading">Reading</a>
                                     </li>
                                     <li>
-                                        <a href="#">Music</a>
+                                        <a href="blog.html?category=Music" data-blog-category="Music">Music</a>
                                     </li>
                                 </ul>
                             </div>
@@ -207,5 +166,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts/blog-posts.js"></script>
+    <script src="scripts/blog.js"></script>
 </body>
 </html>
