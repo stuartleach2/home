@@ -102,6 +102,7 @@
         categoryLinks.forEach(function (link) {
             var isSelected = link.getAttribute("data-blog-category") === selectedCategory;
             link.setAttribute("aria-current", isSelected ? "true" : "false");
+            link.classList.toggle("font-weight-bold", isSelected);
         });
 
         renderPosts();
