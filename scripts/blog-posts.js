@@ -1,5 +1,17 @@
 window.blogPosts = [
     {
+        title: "From a Sun Lounger in Kefalonia to an AI Software Engineer",
+        url: "blogpost5.html",
+        image: "images/kefalonia/FullSizeRender.jpeg",
+        imageAlt: "Agia Effimia harbour in Kefalonia",
+        excerpt: "Two years after building this website from a sun lounger in Kefalonia, ChatGPT and Codex helped evolve it again — not by replacing creativity, but by removing the activation energy.",
+        posted: "June 2026",
+        author: "Stuart Leach",
+        authorUrl: "about.html",
+        categories: ["Technology", "Photography", "Reflections"],
+        tags: ["AI", "ChatGPT", "Codex", "GitHub", "Website"]
+    },
+    {
         title: "Lapland Aurora (Akaslompolo)",
         url: "blogpost4.html",
         image: "images/aurora/IMG_3294.jpeg",
