@@ -1,5 +1,17 @@
 window.blogPosts = [
     {
+        title: "Following the Wires Backwards",
+        url: "blogpost6.html",
+        image: "images/music/Spike Island.jpeg",
+        imageAlt: "Original ticket for Spike Island, 27 May 1990",
+        excerpt: "From Spike Island to the Lesser Free Trade Hall: tracing Manchester music connections through New Order, Joy Division, Factory Records, The Stone Roses, James, and beyond.",
+        posted: "June 2026",
+        author: "Stuart Leach",
+        authorUrl: "about.html",
+        categories: ["Music", "Reflections"],
+        tags: ["Manchester", "New Order", "Joy Division", "The Stone Roses", "Factory Records", "Spike Island"]
+    },
+    {
         title: "From a Sun Lounger in Kefalonia to an AI Software Engineer",
         url: "blogpost5.html",
         image: "images/kefalonia/FullSizeRender.jpeg",
