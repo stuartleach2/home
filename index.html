@@ -20,7 +20,7 @@
     body {
       background:
         linear-gradient(rgba(50, 80, 160, 0.6), rgba(50, 80, 160, 0.6)),
-        url('images/kefalonia/blank.jpeg') no-repeat center center fixed;
+        url('images/kefalonia/FullSizeRender.jpeg') no-repeat center center fixed;
       background-size: cover;
       background-attachment: fixed;
       background-blend-mode: overlay;
@@ -29,6 +29,14 @@
     }
 
     .hero { min-height: 100vh; }
+
+    .hero-panel { max-width: 860px; }
+
+    h1 {
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      font-weight: 700;
+    }
 
     .navbar-custom {
       background-color: #6f42c1;
@@ -39,7 +47,7 @@
 
     .nav-link { font-size: 1rem; }
 
-    h2, p, h4 {
+    h2, p, h4, .lead {
       color: #ffffff;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
     }
@@ -79,61 +87,60 @@
       color: #fff;
     }
 
-    .section-pad { padding: 28px 0; }
+    .section-pad { padding: 44px 0; }
 
-    .scroll-link:hover { text-decoration: none; }
-
-    /* Wider homepage gallery wrapper */
-    .gallery-wrap {
-      width: 100%;
-      max-width: 1500px;
-      margin: 0 auto;
-      padding-left: 24px;
-      padding-right: 24px;
+    .eyebrow {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      font-weight: 700;
     }
 
-    .gallery {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .section-intro { max-width: 720px; }
+
+    .feature-card,
+    .story-card {
+      display: block;
+      overflow: hidden;
+      border-radius: 14px;
+      background: rgba(0,0,0,0.38);
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+      color: #fff;
+      height: 100%;
+      text-decoration: none;
     }
 
-    /* Bigger images by default */
-    .gallery-img {
+    .feature-card:hover,
+    .story-card a:hover { color: #fff; }
+
+    .feature-card:hover { text-decoration: none; transform: translateY(-4px); }
+
+    .feature-card { transition: transform 0.25s ease; }
+
+    .feature-card img,
+    .story-card img {
       width: 100%;
-      max-width: 680px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease;
-      margin-bottom: 30px;
+      height: 245px;
+      object-fit: cover;
       display: block;
     }
 
-    .gallery-img:hover {
-      transform: scale(1.03);
-    }
+    .feature-card__body,
+    .story-card__body { padding: 1.25rem; }
 
-    /* Make them feel more generous on large screens */
-    @media (min-width: 1200px) {
-      .gallery-img {
-        max-width: 760px;
-      }
-    }
+    .story-card a { color: #fff; font-weight: 700; }
+
+    .story-card__meta { font-size: 0.9rem; opacity: 0.9; }
+
+    .about-site { max-width: 920px; margin: 0 auto; }
+
+    .scroll-link:hover { text-decoration: none; }
 
     /* Keep mobile neat */
     @media (max-width: 767.98px) {
-      .gallery-wrap {
-        padding-left: 16px;
-        padding-right: 16px;
-      }
-
-      .gallery-img {
-        max-width: 100%;
-        margin-bottom: 22px;
-      }
-
       .section-pad {
-        padding: 20px 0;
+        padding: 28px 0;
       }
     }
 
@@ -170,79 +177,120 @@
   </nav>
 
   <!-- Hero Text Block -->
-  <div class="container text-center d-flex flex-column justify-content-center align-items-center hero">
-    <h2 data-aos="zoom-in">Welcome</h2>
+  <section class="container text-center d-flex flex-column justify-content-center align-items-center hero">
+    <div class="glass-card hero-panel p-4 p-md-5" data-aos="zoom-in">
+      <p class="eyebrow mb-2">Photography from places that stay with you</p>
+      <h1 class="display-4 mb-3">Stuart Leach Photography</h1>
+      <p class="lead mb-2">Landscapes, waterfalls and northern skies.</p>
+      <p class="mb-4">Images from Yorkshire, Scandinavia, Kefalonia and beyond.</p>
+      <div class="hero-actions d-flex flex-column flex-sm-row justify-content-center">
+        <a class="btn btn-light btn-lg mb-2 mb-sm-0 mr-sm-3" href="gallery.html">Explore the Galleries <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost btn-lg" href="blog.html">Read the Blog <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
 
-    <p class="mb-2" data-aos="fade-up" data-aos-delay="200">
-      Landscapes • waterfalls • aurora
-    </p>
-
-    <p class="mb-4" data-aos="fade-up" data-aos-delay="800">
-      Built on an iPhone while sat on a sun lounger in the hills overlooking Agia Effimia in Kefalonia, from code written by GPT-4o.
-    </p>
-
-    <span class="hero__scroll" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="900">
+    <span class="hero__scroll" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="500">
       <br>
-      <a class="scroll-link" href="#start" aria-label="Scroll to gallery">
-        <i class="bi bi-chevron-double-down bouncing-chevron" data-aos="fade-up" data-aos-delay="1000"></i>
+      <a class="scroll-link" href="#featured-work" aria-label="Scroll to featured work">
+        <i class="bi bi-chevron-double-down bouncing-chevron" data-aos="fade-up" data-aos-delay="700"></i>
       </a>
     </span>
-  </div>
+  </section>
 
-  <div id="start"></div>
-
-  <!-- Vertical Gallery -->
-  <div class="gallery-wrap">
-    <div class="gallery">
-
-      <div data-aos="fade-up-right" data-aos-delay="400" class="w-100 d-flex justify-content-start mb-5">
-        <img loading="lazy" src="images/kefalonia/FullSizeRender.jpeg" alt="Agia Effimia from Villa Remvi" class="gallery-img" />
+  <main id="start">
+    <!-- Featured Work -->
+    <section id="featured-work" class="container section-pad">
+      <div class="text-center mb-4" data-aos="fade-up">
+        <p class="eyebrow mb-2">Featured work</p>
+        <h2>Three ways into the galleries</h2>
+        <p class="section-intro mx-auto">A few favourite routes through the archive: falling water in the Dales, aurora nights in Lapland, and slower travel images from warmer edges.</p>
       </div>
-
-      <div data-aos="fade-up-left" data-aos-delay="800" class="w-100 d-flex justify-content-end mb-5">
-        <img loading="lazy" src="images/aurora/nikon/DSC_0076-Edit.jpg" alt="Northern Lights, Akaslompolo" class="gallery-img" />
-      </div>
-
-      <!-- CTA 1: Gallery -->
-      <div class="container section-pad" data-aos="fade-up" data-aos-delay="800">
-        <div class="glass-card p-4 text-center">
-          <h4 class="mb-2">See the work</h4>
-          <p class="mb-3">Step into the gallery for the full set of images.</p>
-          <a class="btn btn-light" href="gallery.html" aria-label="Go to Gallery">
-            <i class="bi bi-grid-3x3-gap mr-1"></i> Open Gallery
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a class="feature-card" href="galleryroom3.html" aria-label="View Waterfalls gallery">
+            <img loading="lazy" src="images/waterfalls/Scale Haw Force 4a.jpg" alt="Scale Haw Force waterfall" />
+            <div class="feature-card__body">
+              <h4>Waterfalls</h4>
+              <p>Yorkshire Dales falls, woodland paths and the pull of moving water.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <a class="feature-card" href="galleryroom5.html" aria-label="View Aurora gallery">
+            <img loading="lazy" src="images/aurora/nikon/DSC_0076-Edit.jpg" alt="Northern lights over Akaslompolo" />
+            <div class="feature-card__body">
+              <h4>Aurora</h4>
+              <p>Cold nights, patient exposures, and the northern sky doing impossible things.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <a class="feature-card" href="galleryroom4.html" aria-label="View Landscapes and Travel gallery">
+            <img loading="lazy" src="images/kefalonianconversations/taverna_color.jpg" alt="Kefalonian taverna table in colour" />
+            <div class="feature-card__body">
+              <h4>Landscapes / Travel</h4>
+              <p>Kefalonian details, travel memories, and quiet scenes found along the way.</p>
+            </div>
           </a>
         </div>
       </div>
+    </section>
 
-      <div data-aos="fade-up-right" data-aos-delay="800" class="w-100 d-flex justify-content-start mb-5">
-        <img loading="lazy" src="images/waterfalls/Scale Haw Force 2.jpg" alt="Scale Haw Force" class="gallery-img" />
+    <!-- Latest Stories -->
+    <section class="container section-pad">
+      <div class="text-center mb-4" data-aos="fade-up">
+        <p class="eyebrow mb-2">Latest stories</p>
+        <h2>Notes from behind the pictures</h2>
+        <p class="section-intro mx-auto">Some posts are about photography, some are about place, and some follow the odd thread that starts tugging at a memory.</p>
       </div>
-
-      <div data-aos="fade-up-left" data-aos-delay="800" class="w-100 d-flex justify-content-end mb-5">
-        <img loading="lazy" src="images/kefalonia/Image (102).jpg" alt="Sunset on Kaminia beach (1)" class="gallery-img" />
-      </div>
-
-      <!-- CTA 2: Blog -->
-      <div class="container section-pad" data-aos="fade-up" data-aos-delay="800">
-        <div class="glass-card p-4 text-center">
-          <h4 class="mb-2">Read the stories</h4>
-          <p class="mb-3">Short posts about places, process, and what the camera didn’t capture.</p>
-          <a class="btn btn-light" href="blog.html" aria-label="Go to Blog">
-            <i class="bi bi-journal-text mr-1"></i> Open Blog
-          </a>
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <article class="story-card h-100">
+            <img loading="lazy" src="images/music/Spike Island.jpeg" alt="Original ticket for Spike Island, 27 May 1990" />
+            <div class="story-card__body">
+              <p class="story-card__meta">June 2026 · Music / Reflections</p>
+              <h4>Following the Wires Backwards</h4>
+              <p>Tracing the connections between music, memory and Manchester.</p>
+              <a href="blogpost6.html">Read the story <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <article class="story-card h-100">
+            <img loading="lazy" src="images/kefalonianconversations/taverna_color.jpg" alt="Kefalonian Conversations taverna image" />
+            <div class="story-card__body">
+              <p class="story-card__meta">June 2025 · Photography / Travel</p>
+              <h4>Kefalonian Conversations</h4>
+              <p>Colour and monochrome image pairs from familiar Kefalonian corners.</p>
+              <a href="galleryroom4.html">View the set <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <article class="story-card h-100">
+            <img loading="lazy" src="images/aurora/IMG_3294.jpeg" alt="Lapland aurora photographed on iPhone" />
+            <div class="story-card__body">
+              <p class="story-card__meta">February 2026 · Photography / Travel</p>
+              <h4>Lapland Aurora (Akaslompolo)</h4>
+              <p>Waiting in the snow while the sky moved quietly above us.</p>
+              <a href="blogpost4.html">Read the story <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div data-aos="fade-up-right" data-aos-delay="800" class="w-100 d-flex justify-content-start mb-5">
-        <img loading="lazy" src="images/kefalonia/Image (112).jpg" alt="Sunset on Kaminia beach (2)" class="gallery-img" />
+    <!-- About this site -->
+    <section class="container section-pad" data-aos="fade-up">
+      <div class="glass-card about-site p-4 p-md-5 text-center">
+        <p class="eyebrow mb-2">About this site</p>
+        <h2>A photography site with a slightly unusual beginning</h2>
+        <p class="mb-3">This place started on an iPhone, early in the morning, from a sun lounger in the hills above Agia Effimia in Kefalonia. The AI-assisted origin story is still part of it — but the reason for keeping it going is simpler: photographs, places, family memories, and curiosity.</p>
+        <p class="mb-4">I hope the site feels personal rather than polished to perfection: a home for landscapes, waterfalls, northern skies and the stories that gather around them.</p>
+        <a class="btn btn-ghost" href="blogpost5.html">Read how the site evolved <span aria-hidden="true">→</span></a>
       </div>
-
-      <div data-aos="fade-up-left" data-aos-delay="800" class="w-100 d-flex justify-content-end mb-5">
-        <img loading="lazy" src="images/aurora/nikon/Landscapes/DSC_0034-Edit_Original.jpeg" alt="Sunset on Lake Akaslompolo (Finland)" class="gallery-img" />
-      </div>
-
-    </div>
-  </div>
+    </section>
+  </main>
 
   <footer class="text-center mt-5">
     <p>&copy; 2024 Stuart Leach. All rights reserved.</p>
