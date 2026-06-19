@@ -19,17 +19,33 @@
 
     body {
       background:
-        linear-gradient(rgba(50, 80, 160, 0.6), rgba(50, 80, 160, 0.6)),
         /* url('images/waterfalls/Scale Haw Force 3.jpg') no-repeat center center fixed; */
         url('images/waterfalls/ChatGPT Image Jun 19, 2026, 07_30_00 PM.png') no-repeat center center fixed;
       background-size: cover;
       background-attachment: fixed;
-      background-blend-mode: overlay;
       color: #ffffff;
       padding-top: 70px;
     }
 
-    .hero { min-height: 100vh; }
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(82, 112, 132, 0.18);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 1;
+    }
 
     .hero-panel { max-width: 860px; }
 
