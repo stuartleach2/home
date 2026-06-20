@@ -161,23 +161,53 @@
 
     /* Keep mobile neat */
     @media (max-width: 768px) {
+      html { background-color: #dbe7ee; }
+
       body {
+        background: #dbe7ee;
         background-image: none;
-        background-attachment: scroll;
-        background-color: #eef3f6;
+        color: #1d2d38;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(82, 112, 132, 0.18), rgba(82, 112, 132, 0.18)),
+          url('images/waterfalls/ChatGPT Image Jun 19, 2026, 07_30_00 PM.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .navbar,
+      .hero,
+      main,
+      footer {
+        position: relative;
+        z-index: 1;
       }
 
       .hero {
-        min-height: 440px;
-        height: 72vh;
-        max-height: 620px;
-        background:
-          url('images/waterfalls/ChatGPT Image Jun 19, 2026, 07_30_00 PM.png') no-repeat center center scroll;
-        background-size: cover;
+        min-height: calc(100svh - 70px);
+        background: transparent;
+        overflow: visible;
+      }
+
+      .hero::before { display: none; }
+
+      .hero-panel {
+        width: min(92vw, 680px);
+        margin-left: auto;
+        margin-right: auto;
       }
 
       main {
-        background-color: #eef3f6;
+        background: transparent;
         color: #1d2d38;
       }
 
@@ -190,8 +220,13 @@
       }
 
       .section-pad {
-        padding: 28px 0;
-        background-color: rgba(238, 243, 246, 0.96);
+        padding: 28px 15px;
+        background-color: rgba(238, 243, 246, 0.88);
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
+        border-radius: 14px;
+        margin-top: 18px;
+        margin-bottom: 18px;
       }
 
       .feature-card h4,
@@ -207,8 +242,7 @@
     }
 
     @media (max-width: 480px) {
-      .hero {
-        height: 68vh;
+      body::before {
         background-position: center top;
       }
     }
