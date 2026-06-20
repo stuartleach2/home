@@ -45,13 +45,36 @@ python3 scripts/audit-links.py
 
 The audit checks local links, scripts, stylesheets, images, and CSS `url(...)` references. It intentionally ignores external URLs, `mailto:`, `tel:`, data URLs, JavaScript URLs, and same-page hash links.
 
-## Asset naming and location guidance
+## Asset Structure
 
-- Prefer placing new assets under `images/<collection-name>/` rather than in the repository root.
-- Use descriptive, stable filenames when practical.
-- Preserve existing filenames and paths unless a cleanup PR updates every reference at the same time.
-- Be careful with filename case: GitHub Pages is case-sensitive, so `.JPG` and `.jpg` are different files.
-- Keep source/original files only when they have a clear purpose; otherwise prefer web-ready images that are actually referenced by pages.
+Current image and media assets are grouped under `images/` by collection or purpose:
+
+```text
+images/
+├── aurora/
+├── boats/
+├── kefalonia/
+├── kefalonianconversations/
+├── misc/
+├── music/
+├── suffolk/
+├── turtles/
+└── waterfalls/
+```
+
+- New images should go in the most appropriate folder under `images/`.
+- Avoid placing image files in the repository root.
+- Preserve filenames unless all references are updated in the same PR.
+- GitHub Pages is case-sensitive, so `.jpg` and `.JPG` are different files.
+- Gallery pages may reference images directly from collection folders.
+- Blog images may be referenced both in individual `blogpost*.html` files and in `scripts/blog-posts.js` metadata.
+- When moving blog images, update both the post content and the metadata where relevant.
+
+Run the link audit after moving or renaming assets:
+
+```bash
+python3 scripts/audit-links.py
+```
 
 ## Blog posts
 
