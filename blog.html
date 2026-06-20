@@ -39,6 +39,13 @@
         .sticky-top {
             z-index: 1000; /* Ensure it stays above other content */
         }
+        @media (min-width: 992px) {
+            .blog-sidebar {
+                position: sticky;
+                top: 6rem;
+                align-self: flex-start;
+            }
+        }
     </style>
 </head>
 <body>
@@ -87,67 +94,69 @@
 
             <!-- Sidebar Widgets Column -->
             <div class="col-md-4">
-                <!-- Search Widget -->
-                <div class="card my-4">
-                    <h5 class="card-header">Search</h5>
-                    <div class="card-body">
-                        <div class="input-group">
-                            <input id="blog-search" type="text" class="form-control" placeholder="Search for..." aria-label="Search blog posts">
-                            <span class="input-group-append">
-                                <button id="blog-search-button" class="btn btn-primary" type="button" style="background-color: #6f42c1;">Go!</button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Categories Widget -->
-                <div class="card my-4">
-                    <h5 class="card-header">Categories</h5>
-                    <div class="card-body">
-                        <ul class="list-unstyled mb-3">
-                            <li>
-                                <a href="blog.html" data-blog-category="">All Posts</a>
-                            </li>
-                        </ul>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <ul class="list-unstyled mb-0">
-                                    <li>
-                                        <a href="blog.html?category=Photography" data-blog-category="Photography">Photography</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog.html?category=Travel" data-blog-category="Travel">Travel</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog.html?category=Architecture" data-blog-category="Architecture">Architecture</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <ul class="list-unstyled mb-0">
-                                    <li>
-                                        <a href="blog.html?category=Technology" data-blog-category="Technology">Technology</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog.html?category=Reading" data-blog-category="Reading">Reading</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog.html?category=Music" data-blog-category="Music">Music</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog.html?category=Reflections" data-blog-category="Reflections">Reflections</a>
-                                    </li>
-                                </ul>
+                <div class="blog-sidebar">
+                    <!-- Search Widget -->
+                    <div class="card my-4">
+                        <h5 class="card-header">Search</h5>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input id="blog-search" type="text" class="form-control" placeholder="Search for..." aria-label="Search blog posts">
+                                <span class="input-group-append">
+                                    <button id="blog-search-button" class="btn btn-primary" type="button" style="background-color: #6f42c1;">Go!</button>
+                                </span>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Side Widget -->
-                <div class="card my-4">
-                    <h5 class="card-header">Coming Soon</h5>
-                    <div class="card-body">
-                        As soon as I have anything interesting to say, you will be the first to know. Until then, enjoy the rest of my website!
+                    <!-- Categories Widget -->
+                    <div class="card my-4">
+                        <h5 class="card-header">Categories</h5>
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-3">
+                                <li>
+                                    <a href="blog.html" data-blog-category="">All Posts</a>
+                                </li>
+                            </ul>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>
+                                            <a href="blog.html?category=Photography" data-blog-category="Photography">Photography</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog.html?category=Travel" data-blog-category="Travel">Travel</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog.html?category=Architecture" data-blog-category="Architecture">Architecture</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>
+                                            <a href="blog.html?category=Technology" data-blog-category="Technology">Technology</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog.html?category=Reading" data-blog-category="Reading">Reading</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog.html?category=Music" data-blog-category="Music">Music</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog.html?category=Reflections" data-blog-category="Reflections">Reflections</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Side Widget -->
+                    <div class="card my-4">
+                        <h5 class="card-header">Coming Soon</h5>
+                        <div class="card-body">
+                            As soon as I have anything interesting to say, you will be the first to know. Until then, enjoy the rest of my website!
+                        </div>
                     </div>
                 </div>
             </div>
