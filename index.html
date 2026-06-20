@@ -160,33 +160,55 @@
     .scroll-link:hover { text-decoration: none; }
 
     /* Keep mobile neat */
-    @media (max-width: 767.98px) {
-      .hero {
-        min-height: auto;
-        height: 72vh;
-        background-size: cover;
-        background-position: center center;
+    @media (max-width: 768px) {
+      body {
+        background-image: none;
         background-attachment: scroll;
+        background-color: #eef3f6;
       }
 
-      body {
+      .hero {
+        min-height: 440px;
+        height: 72vh;
+        max-height: 620px;
+        background:
+          url('images/waterfalls/ChatGPT Image Jun 19, 2026, 07_30_00 PM.png') no-repeat center center scroll;
         background-size: cover;
-        background-position: center center;
-        background-attachment: scroll;
+      }
+
+      main {
+        background-color: #eef3f6;
+        color: #1d2d38;
+      }
+
+      main h2,
+      main p,
+      main h4,
+      main .lead {
+        color: #1d2d38;
+        text-shadow: none;
       }
 
       .section-pad {
         padding: 28px 0;
+        background-color: rgba(238, 243, 246, 0.96);
+      }
+
+      .feature-card h4,
+      .feature-card p,
+      .story-card h4,
+      .story-card p,
+      .story-card a,
+      .about-site h2,
+      .about-site p {
+        color: #fff;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
       }
     }
 
     @media (max-width: 480px) {
       .hero {
         height: 68vh;
-        background-position: center top;
-      }
-
-      body {
         background-position: center top;
       }
     }
