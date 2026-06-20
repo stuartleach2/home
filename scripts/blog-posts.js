@@ -50,7 +50,7 @@ window.blogPosts = [
     {
         title: "Lovecraft Investigations",
         url: "blogpost2.html",
-        image: "rendlesham.jpeg",
+        image: "images/misc/rendlesham.jpeg",
         imageAlt: "Rendlesham Forest",
         excerpt: "A Lovecraftian Holiday: Exploring Suffolk's Spooky Side inspired by the works of Julian Simpson.",
         posted: "August 2024",
