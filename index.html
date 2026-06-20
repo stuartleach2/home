@@ -184,7 +184,6 @@
         pointer-events: none;
       }
 
-      .navbar,
       .hero,
       main,
       footer {
@@ -192,9 +191,15 @@
         z-index: 1;
       }
 
+      .navbar {
+        position: relative;
+        z-index: 1000;
+      }
+
       .navbar.fixed-top {
         position: fixed;
         top: 0;
+        z-index: 1000;
       }
 
       .hero {
