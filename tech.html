@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology - Stuart Leach Photography</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --brand-purple:#6f42c1;
+      --page-bg:#f7f7f7;
+      --card-bg:#ffffff;
+      --text:#1f1f1f;
+      --muted:#6c757d;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 16px;
+    }
+
+    body{
+      background-color: var(--page-bg);
+      color: var(--text);
+      padding-top: 76px;
+    }
+
+    .navbar{
+      background-color: var(--brand-purple) !important;
+    }
+
+    .hero-shell{
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+      background: #221833;
+    }
+
+    .hero-panel{
+      position: relative;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 64px 16px;
+      background:
+        linear-gradient(135deg, rgba(111,66,193,.94), rgba(34,24,51,.92)),
+        url("images/aurora/nikon/Landscapes/DSC_0036-Edit_Original.jpeg") center center / cover no-repeat;
+    }
+
+    .hero-content{
+      max-width: 860px;
+      padding: 8px 10px;
+    }
+
+    .kicker{
+      color: rgba(255,255,255,.86);
+      font-size: .95rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .hero-content h1{
+      font-weight: 800;
+      letter-spacing: .2px;
+      font-size: 2.7rem;
+      margin-bottom: 14px;
+    }
+
+    .hero-content p{
+      font-size: 1.12rem;
+      line-height: 1.7;
+      margin: 0 auto;
+      max-width: 760px;
+      opacity: .96;
+    }
+
+    .topic-card{
+      background: var(--card-bg);
+      border: 0;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      height: 100%;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .topic-card:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 14px 34px rgba(0,0,0,.12);
+    }
+
+    .topic-icon{
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(111,66,193,.12);
+      color: var(--brand-purple);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-intro{
+      max-width: 780px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    footer{
+      background-color: var(--brand-purple);
+      color: white;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .social-links a{
+      color: white;
+      margin: 0 10px;
+      font-size: 1.1em;
+      text-decoration: none;
+      opacity: .95;
+    }
+    .social-links a:hover{
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    a{ color: var(--brand-purple); }
+    a:hover{ color: #5b34a3; }
+
+    @media (max-width: 768px){
+      .hero-panel{ min-height: 320px; padding: 48px 16px; }
+      .hero-content h1{ font-size: 2.1rem; }
+      .hero-content p{ font-size: 1.03rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="index.html">Stuart Leach Photography</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item active"><a class="nav-link" href="tech.html">Technology</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="hero-shell">
+    <section class="hero-panel">
+      <div class="hero-content">
+        <div class="kicker">Notes, experiments and reusable examples</div>
+        <h1>Technology</h1>
+        <p>
+          This section gathers experiments, notes and reusable examples from building this site,
+          exploring AI-assisted development, and working with data visualisation and strategy execution.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <main class="container my-5">
+    <div class="row mb-4">
+      <div class="col-lg-9 mx-auto text-center">
+        <p class="section-intro mx-auto">
+          A quiet home for the technical side of the work: what I learn while improving the site,
+          how I think about visualising plans and data, and where AI helps most when the process is already worth keeping.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <article class="card topic-card">
+          <div class="card-body p-4">
+            <div class="topic-icon"><i class="bi bi-window-sidebar"></i></div>
+            <h2 class="h5 font-weight-bold">Building This Site</h2>
+            <p class="mb-0">
+              The journey from building a photography website on an iPhone with ChatGPT to using Codex to inspect,
+              refactor and improve the repository.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <article class="card topic-card">
+          <div class="card-body p-4">
+            <div class="topic-icon"><i class="bi bi-bar-chart-line"></i></div>
+            <h2 class="h5 font-weight-bold">Data Visualisation</h2>
+            <p class="mb-0">
+              Power BI, Deneb, Vega and roadmap visualisation examples, including future open-source templates and sample data.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <article class="card topic-card">
+          <div class="card-body p-4">
+            <div class="topic-icon"><i class="bi bi-cpu"></i></div>
+            <h2 class="h5 font-weight-bold">AI &amp; Knowledge Work</h2>
+            <p class="mb-0">
+              Reflections on AI, automation, process design, knowledge work, and the importance of not automating waste.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center">
+    <div class="social-links">
+      <a href="https://www.instagram.com/stuartleach2" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+      <a href="https://www.threads.net/@stuartleach2" target="_blank"><i class="bi bi-threads"></i> Threads</a>
+    </div>
+    <p>&copy; 2024 Stuart Leach. All rights reserved.</p>
+    <p>Website content and design assistance provided by ChatGPT.</p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
