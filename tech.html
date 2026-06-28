@@ -122,6 +122,14 @@
       color: var(--brand-purple);
       font-size: 1.5rem;
       margin-bottom: 1rem;
+      text-decoration: none;
+    }
+
+    a.topic-icon:hover,
+    a.topic-icon:focus{
+      background: rgba(111,66,193,.2);
+      color: #5b34a3;
+      text-decoration: none;
     }
 
     .status-badge{
@@ -134,7 +142,15 @@
       letter-spacing: .04em;
       margin-bottom: 1rem;
       padding: .35rem .75rem;
+      text-decoration: none;
       text-transform: uppercase;
+    }
+
+    a.status-badge:hover,
+    a.status-badge:focus{
+      background: rgba(111,66,193,.2);
+      color: #5b34a3;
+      text-decoration: none;
     }
 
     .topic-list{
@@ -251,8 +267,8 @@
         <div class="col-lg-6 mb-4">
           <article class="card topic-card">
             <div class="card-body p-4">
-              <div class="topic-icon"><i class="bi bi-window-sidebar"></i></div>
-              <span class="status-badge">Learning Path</span>
+              <a class="topic-icon" href="tech-build-photography-website-ai.html" aria-label="Open Building a Photography Website with AI learning path"><i class="bi bi-window-sidebar"></i></a>
+              <a class="status-badge" href="tech-build-photography-website-ai.html">Learning Path</a>
               <h3 class="h5 font-weight-bold"><a href="tech-build-photography-website-ai.html">Building a Photography Website with AI</a></h3>
               <p class="text-muted font-italic">A step-by-step guide using Bootstrap, GitHub Pages, ChatGPT and Codex.</p>
               <h4 class="h6 font-weight-bold">Planned topics</h4>
