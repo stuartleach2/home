@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build a Photography Website with AI - Stuart Leach Photography</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --brand-purple:#6f42c1;
+      --page-bg:#f7f7f7;
+      --card-bg:#ffffff;
+      --text:#1f1f1f;
+      --muted:#6c757d;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 16px;
+    }
+
+    body{
+      background-color: var(--page-bg);
+      color: var(--text);
+      padding-top: 76px;
+    }
+
+    .navbar{
+      background-color: var(--brand-purple) !important;
+    }
+
+    .hero-shell{
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+      background: #221833;
+    }
+
+    .hero-panel{
+      position: relative;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 64px 16px;
+      background:
+        linear-gradient(135deg, rgba(111,66,193,.94), rgba(34,24,51,.92)),
+        url("images/aurora/nikon/Landscapes/DSC_0036-Edit_Original.jpeg") center center / cover no-repeat;
+    }
+
+    .hero-content{
+      max-width: 860px;
+      padding: 8px 10px;
+    }
+
+    .eyebrow{
+      color: rgba(255,255,255,.86);
+      font-size: .95rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .hero-content h1{
+      font-weight: 800;
+      letter-spacing: .2px;
+      font-size: 2.7rem;
+      margin-bottom: 14px;
+    }
+
+    .hero-content p{
+      font-size: 1.12rem;
+      line-height: 1.7;
+      margin: 0 auto;
+      max-width: 760px;
+      opacity: .96;
+    }
+
+    .section-intro{
+      max-width: 780px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .path-card,
+    .info-panel{
+      background: var(--card-bg);
+      border: 0;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      height: 100%;
+    }
+
+    .path-number{
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(111,66,193,.12);
+      color: var(--brand-purple);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .status-badge{
+      background: rgba(111,66,193,.12);
+      border-radius: 999px;
+      color: var(--brand-purple);
+      display: inline-flex;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      padding: .35rem .75rem;
+      text-transform: uppercase;
+    }
+
+    .resource-panel{
+      background: #ffffff;
+      border-left: 5px solid var(--brand-purple);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .check-list{
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 0;
+      padding-left: 1.2rem;
+    }
+
+    .back-link{
+      font-weight: 700;
+    }
+
+    footer{
+      background-color: var(--brand-purple);
+      color: white;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .social-links a{
+      color: white;
+      margin: 0 10px;
+      font-size: 1.1em;
+      text-decoration: none;
+      opacity: .95;
+    }
+    .social-links a:hover{
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    a{ color: var(--brand-purple); }
+    a:hover{ color: #5b34a3; }
+
+    @media (max-width: 768px){
+      .hero-panel{ min-height: 320px; padding: 48px 16px; }
+      .hero-content h1{ font-size: 2.1rem; }
+      .hero-content p{ font-size: 1.03rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="index.html">Stuart Leach Photography</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item active"><a class="nav-link" href="tech.html">Technology</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="hero-shell">
+    <section class="hero-panel">
+      <div class="hero-content">
+        <div class="eyebrow">Technology learning path</div>
+        <h1>Build a Photography Website with AI</h1>
+        <p>A practical guide using Bootstrap, GitHub Pages, ChatGPT and Codex.</p>
+      </div>
+    </section>
+  </div>
+
+  <main class="container my-5">
+    <section class="row mb-5">
+      <div class="col-lg-9 mx-auto text-center">
+        <h2 class="h4 font-weight-bold mb-3">A practical series for building and maintaining a simple photography website</h2>
+        <p class="section-intro mx-auto">
+          This guide is organised as a series of practical tutorials. Follow them in order, or jump directly to the topic you need.
+        </p>
+        <p class="section-intro mx-auto mb-0">
+          The aim is to show how a simple, low-cost photography website can be built and maintained using static HTML, Bootstrap,
+          GitHub Pages and AI-assisted development tools.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="learning-path-heading" class="mb-5">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+        <div>
+          <p class="eyebrow text-muted mb-2">Planned tutorial series</p>
+          <h2 id="learning-path-heading" class="h3 font-weight-bold mb-2">Learning Path</h2>
+          <p class="section-intro mb-0">
+            These modules will become focused tutorials over time. For now, each topic is marked as planned.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="card path-card">
+            <div class="card-body p-4">
+              <div class="path-number">1</div>
+              <h3 class="h5 font-weight-bold">Choosing an Architecture</h3>
+              <span class="status-badge">Planned / Coming Soon</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="card path-card">
+            <div class="card-body p-4">
+              <div class="path-number">2</div>
+              <h3 class="h5 font-weight-bold">Bootstrap Fundamentals</h3>
+              <span class="status-badge">Planned / Coming Soon</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="card path-card">
+            <div class="card-body p-4">
+              <div class="path-number">3</div>
+              <h3 class="h5 font-weight-bold">Setting Up GitHub Pages</h3>
+              <span class="status-badge">Planned / Coming Soon</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="card path-card">
+            <div class="card-body p-4">
+              <div class="path-number">4</div>
+              <h3 class="h5 font-weight-bold">Building the First Homepage</h3>
+              <span class="status-badge">Planned / Coming Soon</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="card path-card">
+            <div class="card-body p-4">
+              <div class="path-number">5</div>
+              <h3 class="h5 font-weight-bold">Creating Galleries</h3>
+              <span class="status-badge">Planned / Coming Soon</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="card path-card">
+            <div class="card-body p-4">
+              <div class="path-number">6</div>
+              <h3 class="h5 font-weight-bold">Adding a Blog</h3>
+              <span class="status-badge">Planned / Coming Soon</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="card path-card">
+            <div class="card-body p-4">
+              <div class="path-number">7</div>
+              <h3 class="h5 font-weight-bold">Working with ChatGPT</h3>
+              <span class="status-badge">Planned / Coming Soon</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="card path-card">
+            <div class="card-body p-4">
+              <div class="path-number">8</div>
+              <h3 class="h5 font-weight-bold">Working with Codex</h3>
+              <span class="status-badge">Planned / Coming Soon</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="card path-card">
+            <div class="card-body p-4">
+              <div class="path-number">9</div>
+              <h3 class="h5 font-weight-bold">Repository Organisation</h3>
+              <span class="status-badge">Planned / Coming Soon</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="card path-card">
+            <div class="card-body p-4">
+              <div class="path-number">10</div>
+              <h3 class="h5 font-weight-bold">Publishing and Maintenance</h3>
+              <span class="status-badge">Planned / Coming Soon</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="row mb-5">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="info-panel p-4 p-md-5">
+          <h2 class="h4 font-weight-bold">What you&rsquo;ll need</h2>
+          <ul class="check-list">
+            <li>A GitHub account</li>
+            <li>ChatGPT access</li>
+            <li>A collection of photographs</li>
+            <li>Basic comfort editing text files</li>
+            <li>No advanced web development experience required</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="info-panel p-4 p-md-5">
+          <h2 class="h4 font-weight-bold">Approach</h2>
+          <ul class="check-list">
+            <li>Start with a simple static site</li>
+            <li>Use Bootstrap for responsive layout and common components</li>
+            <li>Host with GitHub Pages</li>
+            <li>Use ChatGPT for step-by-step page creation and learning</li>
+            <li>Use Codex for repository-wide improvements and pull requests</li>
+            <li>Keep changes small and reviewable</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="resource-panel p-4 p-md-5">
+      <h2 class="h4 font-weight-bold">How to use this hub</h2>
+      <p class="section-intro mb-3">
+        Use this page as the starting point for the series. As tutorial pages are added, each planned module can be linked from the learning path without changing the overall structure.
+      </p>
+      <a class="back-link" href="tech.html"><i class="bi bi-arrow-left"></i> Back to Technology</a>
+    </section>
+  </main>
+
+  <footer class="text-center">
+    <div class="social-links">
+      <a href="https://www.instagram.com/stuartleach2" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+      <a href="https://www.threads.net/@stuartleach2" target="_blank"><i class="bi bi-threads"></i> Threads</a>
+    </div>
+    <p>&copy; 2024 Stuart Leach. All rights reserved.</p>
+    <p>Website content and design assistance provided by ChatGPT.</p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
