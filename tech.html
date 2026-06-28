@@ -59,7 +59,7 @@
       padding: 8px 10px;
     }
 
-    .kicker{
+    .eyebrow{
       color: rgba(255,255,255,.86);
       font-size: .95rem;
       letter-spacing: .08em;
@@ -108,6 +108,36 @@
       color: var(--brand-purple);
       font-size: 1.5rem;
       margin-bottom: 1rem;
+    }
+
+    .status-badge{
+      background: rgba(111,66,193,.12);
+      border-radius: 999px;
+      color: var(--brand-purple);
+      display: inline-flex;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      margin-bottom: 1rem;
+      padding: .35rem .75rem;
+      text-transform: uppercase;
+    }
+
+    .topic-list{
+      color: var(--muted);
+      margin-bottom: 0;
+      padding-left: 1.1rem;
+    }
+
+    .topic-list li{
+      margin-bottom: .35rem;
+    }
+
+    .resource-panel{
+      background: #ffffff;
+      border-left: 5px solid var(--brand-purple);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
 
     .section-intro{
@@ -170,64 +200,126 @@
   <div class="hero-shell">
     <section class="hero-panel">
       <div class="hero-content">
-        <div class="kicker">Notes, experiments and reusable examples</div>
+        <div class="eyebrow">Practical knowledge base</div>
         <h1>Technology</h1>
         <p>
-          This section gathers experiments, notes and reusable examples from building this site,
-          exploring AI-assisted development, and working with data visualisation.
+          A practical knowledge base covering website development, AI-assisted software development,
+          data visualisation and modern delivery practices.
         </p>
       </div>
     </section>
   </div>
 
   <main class="container my-5">
-    <div class="row mb-4">
+    <section class="row mb-5">
       <div class="col-lg-9 mx-auto text-center">
-        <p class="section-intro mx-auto">
-          A quiet home for the technical side of the work: what I learn while improving the site,
-          how I think about visualising plans and data, and where AI helps most when the process is already worth keeping.
+        <h2 class="h4 font-weight-bold mb-3">Practical guides, tutorials and reusable examples</h2>
+        <p class="section-intro mx-auto mb-0">
+          This section is designed as a working knowledge base for methods, patterns and resources that can be reused.
+          It will collect concise tutorials, implementation notes, downloadable examples and lessons learned from real delivery work,
+          with an emphasis on teaching repeatable approaches rather than documenting a personal story.
         </p>
       </div>
-    </div>
+    </section>
 
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <article class="card topic-card">
-          <div class="card-body p-4">
-            <div class="topic-icon"><i class="bi bi-window-sidebar"></i></div>
-            <h2 class="h5 font-weight-bold">Building This Site</h2>
-            <p class="mb-0">
-              The journey from building a photography website on an iPhone with ChatGPT to using Codex to inspect,
-              refactor and improve the repository.
-            </p>
-          </div>
-        </article>
+    <section aria-labelledby="learning-paths-heading">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+        <div>
+          <p class="eyebrow text-muted mb-2">Start here</p>
+          <h2 id="learning-paths-heading" class="h3 font-weight-bold mb-2">Learning Paths</h2>
+          <p class="section-intro mb-0">
+            Each path is structured so future guides can be added as focused modules, examples or downloads.
+          </p>
+        </div>
       </div>
 
-      <div class="col-md-4 mb-4">
-        <article class="card topic-card">
-          <div class="card-body p-4">
-            <div class="topic-icon"><i class="bi bi-bar-chart-line"></i></div>
-            <h2 class="h5 font-weight-bold">Data Visualisation</h2>
-            <p class="mb-0">
-              Power BI, Deneb, Vega and roadmap visualisation examples, including future open-source templates and sample data.
-            </p>
-          </div>
-        </article>
-      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <article class="card topic-card">
+            <div class="card-body p-4">
+              <div class="topic-icon"><i class="bi bi-window-sidebar"></i></div>
+              <span class="status-badge">Coming Soon</span>
+              <h3 class="h5 font-weight-bold">Building a Photography Website with AI</h3>
+              <p class="text-muted font-italic">A step-by-step guide using Bootstrap, GitHub Pages, ChatGPT and Codex.</p>
+              <h4 class="h6 font-weight-bold">Planned topics</h4>
+              <ul class="topic-list">
+                <li>Choosing an architecture</li>
+                <li>Bootstrap fundamentals</li>
+                <li>GitHub Pages</li>
+                <li>Working with ChatGPT</li>
+                <li>Working with Codex</li>
+                <li>Repository organisation</li>
+                <li>Publishing and maintenance</li>
+              </ul>
+            </div>
+          </article>
+        </div>
 
-      <div class="col-md-4 mb-4">
-        <article class="card topic-card">
-          <div class="card-body p-4">
-            <div class="topic-icon"><i class="bi bi-cpu"></i></div>
-            <h2 class="h5 font-weight-bold">Lean, Agile, DevOps &amp; AI</h2>
-            <p class="mb-0">
-              Reflections on how BPM, Lean, Agile, DevOps and emerging technologies can improve outcomes without automating inefficiency.
-            </p>
-          </div>
-        </article>
+        <div class="col-lg-6 mb-4">
+          <article class="card topic-card">
+            <div class="card-body p-4">
+              <div class="topic-icon"><i class="bi bi-bar-chart-line"></i></div>
+              <span class="status-badge">Coming Soon</span>
+              <h3 class="h5 font-weight-bold">Data Visualisation</h3>
+              <p class="text-muted font-italic">Power BI, Deneb, Vega and interactive reporting.</p>
+              <h4 class="h6 font-weight-bold">Planned topics</h4>
+              <ul class="topic-list">
+                <li>Deneb roadmap template</li>
+                <li>Vega examples</li>
+                <li>Power BI techniques</li>
+                <li>Sample datasets</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <article class="card topic-card">
+            <div class="card-body p-4">
+              <div class="topic-icon"><i class="bi bi-diagram-3"></i></div>
+              <span class="status-badge">Coming Soon</span>
+              <h3 class="h5 font-weight-bold">Lean, Agile, DevOps &amp; AI</h3>
+              <p class="text-muted font-italic">Process improvement, delivery models and applying AI effectively.</p>
+              <h4 class="h6 font-weight-bold">Planned topics</h4>
+              <ul class="topic-list">
+                <li>Lean thinking</li>
+                <li>Agile delivery</li>
+                <li>DevOps</li>
+                <li>Strategy execution</li>
+                <li>AI adoption</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <article class="card topic-card">
+            <div class="card-body p-4">
+              <div class="topic-icon"><i class="bi bi-box-seam"></i></div>
+              <span class="status-badge">Coming Soon</span>
+              <h3 class="h5 font-weight-bold">Open Source Projects</h3>
+              <p class="text-muted font-italic">Reusable tools, templates and examples.</p>
+              <h4 class="h6 font-weight-bold">Planned topics</h4>
+              <ul class="topic-list">
+                <li>Deneb roadmap</li>
+                <li>Sample repositories</li>
+                <li>Downloads</li>
+                <li>MIT licensing</li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="resource-panel p-4 p-md-5 mt-2">
+      <h2 class="h4 font-weight-bold">Future Resources</h2>
+      <p class="section-intro mb-0">
+        The knowledge base will expand over time with practical tutorials, downloadable templates, example repositories and
+        concise reference material. Future guides should remain task-focused, easy to scan and supported by reusable assets
+        wherever possible.
+      </p>
+    </section>
   </main>
 
   <footer class="text-center">
