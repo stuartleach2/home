@@ -20,6 +20,10 @@
         });
     }
 
+    function getPostCategories(post) {
+        return Array.isArray(post.categories) ? post.categories : [];
+    }
+
     function getPostTags(post) {
         return Array.isArray(post.tags) ? post.tags : [];
     }
@@ -34,7 +38,7 @@
             post.excerpt,
             post.posted,
             post.author,
-            post.categories.join(" "),
+            getPostCategories(post).join(" "),
             getPostTags(post).join(" ")
         ].join(" ").toLowerCase();
 
@@ -46,12 +50,12 @@
             return true;
         }
 
-        return post.categories.indexOf(category) !== -1;
+        return getPostCategories(post).indexOf(category) !== -1;
     }
 
     function renderPost(post) {
         return [
-            '<div class="card mb-4" data-post-categories="' + escapeHtml(post.categories.join(",")) + '">',
+            '<div class="card mb-4" data-post-categories="' + escapeHtml(getPostCategories(post).join(",")) + '">',
             '   <img class="img-thumbnail" src="' + escapeHtml(post.image) + '" alt="' + escapeHtml(post.imageAlt) + '" style="width: 50%; height: auto;">',
             '   <div class="card-body">',
             '       <h2 class="card-title"><a href="' + escapeHtml(post.url) + '">' + escapeHtml(post.title) + '</a></h2>',
