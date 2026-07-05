@@ -9,7 +9,7 @@ window.blogPosts = [
         author: "Stuart Leach",
         authorUrl: "about.html",
         categories: ["Music", "Photography", "Reflections"],
-        tags: ["Gorillaz", "Damon Albarn", "Co-op Live", "Manchester", "family", "live music"]
+        tags: ["Gorillaz", "Damon Albarn", "Co-op Live", "Manchester", "family", "live music", "Music"]
     },
     {
         title: "Belle and Sebastian, Saint Etienne, and the Long Thread Between Generations",
@@ -21,7 +21,7 @@ window.blogPosts = [
         author: "Stuart Leach",
         authorUrl: "about.html",
         categories: ["Music", "Photography", "Reflections"],
-        tags: ["Belle and Sebastian", "Saint Etienne", "The Piece Hall", "Halifax", "Foxbase Alpha", "If You're Feeling Sinister"]
+        tags: ["Belle and Sebastian", "Saint Etienne", "The Piece Hall", "Halifax", "Foxbase Alpha", "If You're Feeling Sinister", "Music"]
     },
     {
         title: "Following the Wires Backwards",
