@@ -1,5 +1,29 @@
 window.blogPosts = [
     {
+        title: "Gorillaz at Co-op Live: When My Daughter Pulled Me Forwards",
+        url: "blogpost7.html",
+        image: "images/music/gorillaz-coop-live-placeholder.svg",
+        imageAlt: "Placeholder for a personal photo from Gorillaz at Manchester Co-op Live Arena",
+        excerpt: "A father-daughter night at Manchester Co-op Live, where the direction of musical influence reversed and my daughter pulled me forward into Damon Albarn's animated, collaborative world.",
+        posted: "July 2026",
+        author: "Stuart Leach",
+        authorUrl: "about.html",
+        categories: ["Music", "Photography", "Reflections"],
+        tags: ["Gorillaz", "Damon Albarn", "Co-op Live", "Manchester", "family", "live music"]
+    },
+    {
+        title: "Belle and Sebastian, Saint Etienne, and the Long Thread Between Generations",
+        url: "blogpost8.html",
+        image: "images/music/belle-and-sebastian-piece-hall-placeholder.svg",
+        imageAlt: "Placeholder for a personal photo from Belle and Sebastian and Saint Etienne at The Piece Hall, Halifax",
+        excerpt: "A reflective father-daughter evening at The Piece Hall, Halifax, with Saint Etienne memories, Belle and Sebastian tenderness, and indie music shared across generations.",
+        posted: "July 2026",
+        author: "Stuart Leach",
+        authorUrl: "about.html",
+        categories: ["Music", "Photography", "Reflections"],
+        tags: ["Belle and Sebastian", "Saint Etienne", "The Piece Hall", "Halifax", "Foxbase Alpha", "If You're Feeling Sinister"]
+    },
+    {
         title: "Following the Wires Backwards",
         url: "blogpost6.html",
         image: "images/music/Spike Island.jpeg",
