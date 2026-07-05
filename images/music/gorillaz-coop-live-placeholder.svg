@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder image for Gorillaz at Co-op Live</title>
+  <desc id="desc">A simple purple gradient placeholder to replace with a personal concert photograph.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2d2140"/>
+      <stop offset="1" stop-color="#6f42c1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <circle cx="220" cy="180" r="90" fill="#ffffff" opacity="0.08"/>
+  <circle cx="970" cy="620" r="150" fill="#ffffff" opacity="0.08"/>
+  <text x="600" y="360" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="54" text-anchor="middle">Gorillaz at Co-op Live</text>
+  <text x="600" y="430" fill="#f1ecff" font-family="Arial, Helvetica, sans-serif" font-size="30" text-anchor="middle">PLACEHOLDER — replace with your own photo</text>
+</svg>
