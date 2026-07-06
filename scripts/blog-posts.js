@@ -4,7 +4,7 @@ window.blogPosts = [
         url: "blogpost7.html",
         image: "images/music/gorillaz-coop-live-placeholder.svg",
         imageAlt: "Placeholder for a personal photo from Gorillaz at Manchester Co-op Live Arena",
-        excerpt: "A father-daughter night at Manchester Co-op Live, where the direction of musical influence reversed and my daughter pulled me forward into Damon Albarn's animated, collaborative world.",
+        excerpt: "A father-daughter night at Manchester Co-op Live, where the direction of musical influence reversed and my daughter pulled me into Damon Albarn and Jamie Hewlett's animated, collaborative world.",
         posted: "July 2026",
         author: "Stuart Leach",
         authorUrl: "about.html",
