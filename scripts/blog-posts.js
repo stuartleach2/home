@@ -1,6 +1,6 @@
 window.blogPosts = [
     {
-        title: "Gorillaz at Co-op Live: When My Daughter Pulled Me Forwards",
+        title: "Gorillaz at Manchester's Co-op Live arena",
         url: "blogpost7.html",
         image: "images/music/gorillaz-coop-live-placeholder.svg",
         imageAlt: "Placeholder for a personal photo from Gorillaz at Manchester Co-op Live Arena",
@@ -12,7 +12,7 @@ window.blogPosts = [
         tags: ["Gorillaz", "Damon Albarn", "Co-op Live", "Manchester", "family", "live music", "Music"]
     },
     {
-        title: "Belle and Sebastian, Saint Etienne, and the Long Thread Between Generations",
+        title: "Belle and Sebastian, Saint Etienne, at The Piece Hall, Halifax",
         url: "blogpost8.html",
         image: "images/music/belle-and-sebastian-piece-hall-placeholder.svg",
         imageAlt: "Placeholder for a personal photo from Belle and Sebastian and Saint Etienne at The Piece Hall, Halifax",
