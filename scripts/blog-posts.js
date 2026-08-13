@@ -2,8 +2,8 @@ window.blogPosts = [
     {
         title: "Gorillaz at Manchester's Co-op Live arena",
         url: "blogpost7.html",
-        image: "images/music/gorillaz-coop-live-placeholder.svg",
-        imageAlt: "Placeholder for a personal photo from Gorillaz at Manchester Co-op Live Arena",
+        image: "images/music/gorillaz/IMG_3445_SnapseedCopy.jpg",
+        imageAlt: "Damon Albarn performing with Gorillaz at Manchester Co-op Live Arena",
         excerpt: "A father-daughter night at Manchester Co-op Live, where the direction of musical influence reversed and my daughter pulled me into Damon Albarn and Jamie Hewlett's animated, collaborative world.",
         posted: "July 2026",
         author: "Stuart Leach",
@@ -14,8 +14,8 @@ window.blogPosts = [
     {
         title: "Belle and Sebastian, Saint Etienne, at The Piece Hall, Halifax",
         url: "blogpost8.html",
-        image: "images/music/belle-and-sebastian-piece-hall-placeholder.svg",
-        imageAlt: "Placeholder for a personal photo from Belle and Sebastian and Saint Etienne at The Piece Hall, Halifax",
+        image: "images/music/belleandsebastian/Belle_3734.jpg",
+        imageAlt: "Belle and Sebastian performing at The Piece Hall, Halifax",
         excerpt: "A reflective father-daughter evening at The Piece Hall, Halifax, with Saint Etienne memories, Belle and Sebastian tenderness, and indie music shared across generations.",
         posted: "July 2026",
         author: "Stuart Leach",
