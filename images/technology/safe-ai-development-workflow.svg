@@ -1,14 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
- <title id="title">Safe AI development workflow</title><desc id="desc">Six steps in sequence: Define, Plan, Change, Review, Test, Publish.</desc>
- <defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#6f42c1"/></marker><filter id="s"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity=".12"/></filter></defs>
- <rect width="1200" height="300" rx="24" fill="#f7f4fc"/>
- <g stroke="#6f42c1" stroke-width="5" marker-end="url(#a)"><path d="M190 150h35"/><path d="M385 150h35"/><path d="M580 150h35"/><path d="M775 150h35"/><path d="M970 150h35"/></g>
- <g font-family="Arial, sans-serif" text-anchor="middle" font-size="22" font-weight="700" filter="url(#s)">
-  <g><rect x="30" y="100" width="160" height="100" rx="18" fill="#fff"/><text x="110" y="158" fill="#251b32">Define</text></g>
-  <g><rect x="225" y="100" width="160" height="100" rx="18" fill="#fff"/><text x="305" y="158" fill="#251b32">Plan</text></g>
-  <g><rect x="420" y="100" width="160" height="100" rx="18" fill="#fff"/><text x="500" y="158" fill="#251b32">Change</text></g>
-  <g><rect x="615" y="100" width="160" height="100" rx="18" fill="#fff"/><text x="695" y="158" fill="#251b32">Review</text></g>
-  <g><rect x="810" y="100" width="160" height="100" rx="18" fill="#fff"/><text x="890" y="158" fill="#251b32">Test</text></g>
-  <g><rect x="1005" y="100" width="165" height="100" rx="18" fill="#6f42c1"/><text x="1087" y="158" fill="#fff">Publish</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+ <title id="title">A small DevOps feedback loop</title>
+ <desc id="desc">Idea flows to Change, Review, Validation, Release and Feedback. Feedback returns to Idea to begin another small improvement.</desc>
+ <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#6f42c1"/></marker><filter id="s"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity=".12"/></filter></defs>
+ <rect width="1200" height="520" rx="24" fill="#f7f4fc"/>
+ <g fill="none" stroke="#6f42c1" stroke-width="5" marker-end="url(#a)"><path d="M255 155h95"/><path d="M555 155h90"/><path d="M850 155h95"/><path d="M1035 220v80"/><path d="M945 365h-95"/><path d="M645 365h-90"/><path d="M350 365h-95"/><path d="M165 300v-80"/></g>
+ <g font-family="Arial, sans-serif" text-anchor="middle" font-size="24" font-weight="700" filter="url(#s)">
+  <g><rect x="75" y="90" width="180" height="130" rx="18" fill="#fff"/><text x="165" y="164" fill="#251b32">Idea</text></g>
+  <g><rect x="350" y="90" width="205" height="130" rx="18" fill="#fff"/><text x="452" y="164" fill="#251b32">Change</text></g>
+  <g><rect x="645" y="90" width="205" height="130" rx="18" fill="#fff"/><text x="747" y="164" fill="#251b32">Review</text></g>
+  <g><rect x="945" y="90" width="180" height="130" rx="18" fill="#fff"/><text x="1035" y="164" fill="#251b32">Validation</text></g>
+  <g><rect x="945" y="300" width="180" height="130" rx="18" fill="#6f42c1"/><text x="1035" y="374" fill="#fff">Release</text></g>
+  <g><rect x="645" y="300" width="205" height="130" rx="18" fill="#fff"/><text x="747" y="374" fill="#251b32">Feedback</text></g>
+  <g><rect x="75" y="300" width="480" height="130" rx="18" fill="#fff"/><text x="315" y="352" fill="#251b32">Learn and refine</text><text x="315" y="390" font-size="19" font-weight="400" fill="#6c6275">use feedback to shape the next small idea</text></g>
  </g>
 </svg>
