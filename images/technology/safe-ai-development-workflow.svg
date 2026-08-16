@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+ <title id="title">Safe AI development workflow</title><desc id="desc">Six steps in sequence: Define, Plan, Change, Review, Test, Publish.</desc>
+ <defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#6f42c1"/></marker><filter id="s"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity=".12"/></filter></defs>
+ <rect width="1200" height="300" rx="24" fill="#f7f4fc"/>
+ <g stroke="#6f42c1" stroke-width="5" marker-end="url(#a)"><path d="M190 150h35"/><path d="M385 150h35"/><path d="M580 150h35"/><path d="M775 150h35"/><path d="M970 150h35"/></g>
+ <g font-family="Arial, sans-serif" text-anchor="middle" font-size="22" font-weight="700" filter="url(#s)">
+  <g><rect x="30" y="100" width="160" height="100" rx="18" fill="#fff"/><text x="110" y="158" fill="#251b32">Define</text></g>
+  <g><rect x="225" y="100" width="160" height="100" rx="18" fill="#fff"/><text x="305" y="158" fill="#251b32">Plan</text></g>
+  <g><rect x="420" y="100" width="160" height="100" rx="18" fill="#fff"/><text x="500" y="158" fill="#251b32">Change</text></g>
+  <g><rect x="615" y="100" width="160" height="100" rx="18" fill="#fff"/><text x="695" y="158" fill="#251b32">Review</text></g>
+  <g><rect x="810" y="100" width="160" height="100" rx="18" fill="#fff"/><text x="890" y="158" fill="#251b32">Test</text></g>
+  <g><rect x="1005" y="100" width="165" height="100" rx="18" fill="#6f42c1"/><text x="1087" y="158" fill="#fff">Publish</text></g>
+ </g>
+</svg>
