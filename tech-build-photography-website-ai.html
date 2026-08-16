@@ -137,6 +137,13 @@
       text-transform: uppercase;
     }
 
+    a.status-badge:hover,
+    a.status-badge:focus{
+      background: rgba(111,66,193,.2);
+      color: #5b34a3;
+      text-decoration: none;
+    }
+
     .resource-panel{
       background: #ffffff;
       border-left: 5px solid var(--brand-purple);
@@ -236,7 +243,7 @@
           <p class="eyebrow text-muted mb-2">Planned tutorial series</p>
           <h2 id="learning-path-heading" class="h3 font-weight-bold mb-2">Learning Path</h2>
           <p class="section-intro mb-0">
-            These modules will become focused tutorials over time. For now, each topic is marked as planned.
+            Work through the available tutorials in order. Future topics remain marked as planned until they are ready.
           </p>
         </div>
       </div>
@@ -248,7 +255,7 @@
               <div class="path-number">1</div>
               <h3 class="h5 font-weight-bold">Choosing an Architecture</h3>
               <p class="text-muted mb-3">Selecting a simple, maintainable approach using static HTML, Bootstrap and GitHub Pages.</p>
-              <span class="status-badge">Planned</span>
+              <a class="status-badge" href="tech-build-photography-website-ai-architecture.html" aria-label="Start Tutorial 1: Choosing an Architecture">Start tutorial</a>
             </div>
           </article>
         </div>
