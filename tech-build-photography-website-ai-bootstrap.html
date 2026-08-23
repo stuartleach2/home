@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial 2 — Bootstrap Fundamentals - Stuart Leach Photography</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <style>
+    :root{--brand-purple:#6f42c1;--page-bg:#f7f7f7;--card-bg:#fff;--text:#1f1f1f;--muted:#6c757d;--shadow:0 10px 30px rgba(0,0,0,.08);--radius:16px}
+    html{scroll-behavior:smooth}body{background:var(--page-bg);color:var(--text);padding-top:76px;line-height:1.72}.navbar,footer{background-color:var(--brand-purple)!important}
+    .hero-shell{overflow:hidden;background:#221833;box-shadow:0 10px 30px rgba(0,0,0,.12)}.hero-panel{min-height:390px;display:flex;align-items:center;text-align:center;color:#fff;padding:64px 16px;background:linear-gradient(135deg,rgba(111,66,193,.96),rgba(34,24,51,.94)),url("images/aurora/nikon/Landscapes/DSC_0036-Edit_Original.jpeg") center/cover}.hero-content{max-width:920px;margin:auto}.eyebrow{font-size:.9rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;opacity:.88}.hero-content h1{font-size:2.8rem;font-weight:800}.hero-content .lead{max-width:800px;margin:auto;line-height:1.65}
+    .tutorial-shell{max-width:920px}.tutorial-section{background:var(--card-bg);border-radius:var(--radius);box-shadow:var(--shadow);padding:2.25rem;margin-bottom:2rem}.tutorial-section h2{font-size:1.65rem;font-weight:800;margin-bottom:1.25rem}.tutorial-section h3{font-size:1.15rem;font-weight:700;margin-top:1.5rem}.section-number{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;border-radius:13px;background:rgba(111,66,193,.12);color:var(--brand-purple);margin-right:.65rem}.intro-card{border-left:5px solid var(--brand-purple)}
+    .callout{background:#f4effc;border-left:5px solid var(--brand-purple);border-radius:10px;padding:1.25rem 1.4rem;margin:1.5rem 0}.callout.try{background:#f8f5fc}.callout p:last-child{margin-bottom:0}pre{background:#241833;color:#f7f2ff;border-radius:12px;padding:1.3rem;overflow-x:auto;white-space:pre;line-height:1.5;font-size:.9rem}code{color:inherit}.grid-demo{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;margin:1.5rem 0}.grid-demo span{background:#e8def7;color:#563094;text-align:center;padding:.55rem 0;border-radius:4px;font-weight:700}.breakpoint-list strong{color:var(--brand-purple)}
+    .next-panel{background:#241833;color:#fff;border-radius:var(--radius);box-shadow:var(--shadow)}.next-panel .badge{background:rgba(255,255,255,.14);color:#fff}.breadcrumb{background:transparent;padding-left:0}.breadcrumb a,a{color:var(--brand-purple)}a:hover{color:#59339c}footer{color:#fff;padding:20px 0;margin-top:40px}.social-links a{color:#fff;margin:0 10px}.skip-link{position:absolute;left:-9999px}.skip-link:focus{left:1rem;top:1rem;z-index:1100;background:#fff;padding:.5rem}
+    @media(max-width:768px){.hero-panel{min-height:340px;padding:48px 16px}.hero-content h1{font-size:2.15rem}.tutorial-section{padding:1.35rem}.tutorial-section h2{font-size:1.4rem}pre{margin-left:-.35rem;margin-right:-.35rem;padding:1rem;font-size:.78rem}.grid-demo{gap:2px}.grid-demo span{font-size:.7rem;padding:.4rem 0}}
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#tutorial-content">Skip to tutorial content</a>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top"><a class="navbar-brand" href="index.html">Stuart Leach Photography</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li><li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li><li class="nav-item active"><a class="nav-link" href="tech.html">Technology</a></li><li class="nav-item"><a class="nav-link" href="about.html">About</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li></ul></div></nav>
+<header class="hero-shell"><div class="hero-panel"><div class="hero-content"><p class="eyebrow mb-2">Build a Photography Website with AI</p><h1>Tutorial 2 — Bootstrap Fundamentals</h1><p class="lead">Build your first responsive photography page using Bootstrap's grid, cards, images and navigation components.</p></div></div></header>
+<main id="tutorial-content" class="container tutorial-shell my-5">
+<nav aria-label="Breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="tech.html">Technology</a></li><li class="breadcrumb-item"><a href="tech-build-photography-website-ai.html">Build a Photography Website with AI</a></li><li class="breadcrumb-item active" aria-current="page">Bootstrap Fundamentals</li></ol></nav>
+<div class="d-flex flex-column flex-sm-row justify-content-between mb-4"><a class="font-weight-bold mb-2" href="tech-build-photography-website-ai-architecture.html"><i class="bi bi-arrow-left" aria-hidden="true"></i> Previous: Tutorial 1 — Choosing an Architecture</a><a class="font-weight-bold" href="tech-build-photography-website-ai.html">Back to: Build a Photography Website with AI</a></div>
+<section class="tutorial-section intro-card" aria-labelledby="learn"><h2 id="learn">What you'll learn</h2><p>By the end of this tutorial you should understand:</p><div class="row"><div class="col-md-6"><ul><li>what Bootstrap does</li><li>how Bootstrap is added to an HTML page</li><li>the basic structure of an HTML document</li><li>Bootstrap containers</li><li>rows and the 12-column grid</li></ul></div><div class="col-md-6"><ul><li>responsive breakpoints and images</li><li>Bootstrap cards</li><li>responsive navigation and the mobile burger menu</li><li>when a small amount of custom CSS is appropriate</li></ul></div></div><p>You will finish with a simple working photography homepage. Our principle is straightforward: <strong>understand it by building it.</strong></p></section>
+<section class="tutorial-section" aria-labelledby="section-1"><h2 id="section-1"><span class="section-number">1</span>What Does Bootstrap Actually Do?</h2><p><strong>HTML</strong> provides a page's structure and content. <strong>CSS</strong> controls its presentation. <strong>JavaScript</strong> can provide interactive behaviour. Bootstrap supplies a mature collection of CSS styles, layout rules and JavaScript components that solve many common website problems.</p><p>Bootstrap is an open-source framework that originated at Twitter. Think of it as a dependable foundation, not a tool that designs the whole website automatically. You still choose the content, photographs, structure and visual identity.</p></section>
+<section class="tutorial-section" aria-labelledby="section-2"><h2 id="section-2"><span class="section-number">2</span>Create the First HTML File</h2><p>Create a folder for your project, then create a text file named <code>index.html</code>. Add this complete minimum HTML5 page:</p><pre><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;My Photography&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;My Photography&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><p><code>&lt;!doctype html&gt;</code> identifies modern HTML. <code>&lt;html&gt;</code> wraps the page. <code>&lt;head&gt;</code> holds information for the browser; the character-set metadata supports text correctly, the viewport metadata makes mobile sizing behave properly, and <code>&lt;title&gt;</code> names the browser tab. Visible content belongs in <code>&lt;body&gt;</code>.</p><div class="callout try"><strong>Try it</strong><p>Save the file and open it in a browser. Change the heading, save again and refresh. You are already editing a working website.</p></div></section>
+<section class="tutorial-section" aria-labelledby="section-3"><h2 id="section-3"><span class="section-number">3</span>Add Bootstrap</h2><p>A content delivery network (CDN) stores commonly used files on servers that browsers can reach over the internet. It lets us load Bootstrap without installing it locally.</p><p>This learning path uses the same tested Bootstrap 4.5.2 references as the existing website. Add the CSS inside <code>&lt;head&gt;</code>:</p><pre><code>&lt;link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"&gt;</code></pre><p>Add these scripts just before the closing <code>&lt;/body&gt;</code> tag. They make interactive components such as the collapsed navigation work:</p><pre><code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"&gt;&lt;/script&gt;</code></pre><div class="callout"><strong>Checkpoint</strong><p>At this point the page may still look almost empty. Bootstrap is available, but we haven't used any Bootstrap components yet.</p></div></section>
+<section class="tutorial-section" aria-labelledby="section-4"><h2 id="section-4"><span class="section-number">4</span>Containers</h2><p>Bootstrap's <code>.container</code> provides a sensible responsive maximum width and horizontal spacing. It keeps content away from the edges on a phone and centres it within a comfortable width on larger screens.</p><pre><code>&lt;div class="container"&gt;
+    &lt;h1&gt;My Photography&lt;/h1&gt;
+    &lt;p&gt;A simple responsive photography website.&lt;/p&gt;
+&lt;/div&gt;</code></pre><div class="callout try"><strong>Try it</strong><p>Remove <code>class="container"</code>, refresh, and then put it back. Notice the change in the content's width, centring and side spacing.</p></div></section>
+<section class="tutorial-section" aria-labelledby="section-5"><h2 id="section-5"><span class="section-number">5</span>Rows, Columns and the 12-Column Grid</h2><p>Inside a container, <code>.row</code> groups columns. Classes beginning with <code>.col-</code> say how much of the row each item uses. Bootstrap imagines every row as 12 equal units:</p><div class="grid-demo" aria-label="A row divided into 12 equal columns"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span></div><p>Three equal large-screen columns each use four units: 4 + 4 + 4 = 12.</p><pre><code>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-12 col-md-6 col-lg-4"&gt;Landscape card&lt;/div&gt;
+        &lt;div class="col-12 col-md-6 col-lg-4"&gt;Wildlife card&lt;/div&gt;
+        &lt;div class="col-12 col-md-6 col-lg-4"&gt;Travel card&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><ul class="breakpoint-list"><li><strong>Phone:</strong> <code>col-12</code> uses all 12 units, so there is one card per row.</li><li><strong>Medium screen:</strong> <code>col-md-6</code> uses six units, so two cards fit per row.</li><li><strong>Large screen:</strong> <code>col-lg-4</code> uses four units, so three cards fit per row.</li></ul><p>A breakpoint means “from this screen width upwards”. The more specific medium and large rules take effect only when enough room is available.</p><div class="callout try"><strong>Try it</strong><p>Change every <code>col-lg-4</code> to <code>col-lg-6</code> and refresh. On a large screen, each card now uses half of the 12-unit row, so only two fit side by side and the third moves down.</p></div></section>
+<section class="tutorial-section" aria-labelledby="section-6"><h2 id="section-6"><span class="section-number">6</span>Responsive Images</h2><p>A large fixed-width photograph can extend beyond a narrow phone screen. Bootstrap's <code>img-fluid</code> class gives an image a maximum width of 100% and an automatic height, allowing it to scale within its parent while keeping its proportions.</p><pre><code>&lt;img src="images/photo1.jpg"
+     class="img-fluid"
+     alt="Mountain landscape at sunrise"&gt;</code></pre><p>Substitute your own image filename and write alternative text that describes your photograph. The sample <code>images/photo1.jpg</code> path assumes an <code>images</code> folder beside <code>index.html</code>.</p></section>
+<section class="tutorial-section" aria-labelledby="section-7"><h2 id="section-7"><span class="section-number">7</span>Bootstrap Cards</h2><p>A card is useful for combining a photograph, title, short description and link or button into one clear unit:</p><pre><code>&lt;div class="card h-100"&gt;
+    &lt;img src="images/photo1.jpg" class="card-img-top img-fluid"
+         alt="Mountain landscape at sunrise"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h2 class="card-title h5"&gt;Landscapes&lt;/h2&gt;
+        &lt;p class="card-text"&gt;Mountains, coasts and changing light.&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;View gallery&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><p>Place three versions of this card inside the three responsive columns from section 5. <code>h-100</code> makes cards in the same row equal in height, while <code>card-img-top</code> and <code>card-body</code> provide the expected card presentation.</p><div class="callout try"><strong>Try it</strong><p>Change one title and description, then add <code>mb-4</code> to each column. Bootstrap's spacing utility adds a margin below each card so stacked cards do not touch.</p></div></section>
+<section class="tutorial-section" aria-labelledby="section-8"><h2 id="section-8"><span class="section-number">8</span>Navigation and the Burger Menu</h2><p>This responsive navbar contains a brand, the links Home, Gallery and About, and a toggler button. <code>navbar-expand-lg</code> keeps navigation collapsed below the large breakpoint and expands it when more room is available.</p><pre><code>&lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+    &lt;a class="navbar-brand" href="#"&gt;My Photography&lt;/a&gt;
+    &lt;button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#mainNav" aria-controls="mainNav"
+            aria-expanded="false" aria-label="Toggle navigation"&gt;
+        &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="collapse navbar-collapse" id="mainNav"&gt;
+        &lt;ul class="navbar-nav ml-auto"&gt;
+            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#gallery"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre><p>The button targets the collapsed element with the matching <code>id="mainNav"</code>. Bootstrap JavaScript opens and closes it. The familiar burger icon appears on smaller screens because displaying three links across a narrow width would be cramped.</p><div class="callout try"><strong>Try it</strong><p>Resize the browser window slowly. Watch the links become a burger button, then select the button to confirm that the collapsed menu opens.</p></div></section>
+<section class="tutorial-section" aria-labelledby="section-9"><h2 id="section-9"><span class="section-number">9</span>A Little Custom CSS Is Fine</h2><p>Using Bootstrap does not mean every Bootstrap website must look identical. Add a small <code>&lt;style&gt;</code> block after the Bootstrap CSS link when the site needs its own accent colour, hero spacing or image presentation:</p><pre><code>&lt;style&gt;
+    :root { --accent: #6f42c1; }
+    .hero { padding: 5rem 1rem; background: #f4effc; }
+    .btn-primary { background-color: var(--accent); border-color: var(--accent); }
+    .card-img-top { height: 220px; object-fit: cover; }
+&lt;/style&gt;</code></pre><div class="callout"><strong>Use Bootstrap for the common structural problems; use custom CSS for the site's individual visual identity.</strong></div><p>Keep the custom layer small for now. This tutorial is about recognising and combining the foundational patterns.</p></section>
+<section class="tutorial-section" aria-labelledby="section-10"><h2 id="section-10"><span class="section-number">10</span>Put Everything Together</h2><p>Replace your file with this complete <code>index.html</code>. Add three photographs at the sample paths—or change the paths to your own filenames—then open the file locally in a browser.</p><pre><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;My Photography&lt;/title&gt;
+  &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"&gt;
+  &lt;style&gt;
+    :root { --accent: #6f42c1; }
+    .hero { padding: 5rem 1rem; background: #f4effc; }
+    .btn-primary { background-color: var(--accent); border-color: var(--accent); }
+    .card-img-top { height: 220px; object-fit: cover; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+    &lt;a class="navbar-brand" href="#"&gt;My Photography&lt;/a&gt;
+    &lt;button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#mainNav" aria-controls="mainNav"
+            aria-expanded="false" aria-label="Toggle navigation"&gt;
+      &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="collapse navbar-collapse" id="mainNav"&gt;
+      &lt;ul class="navbar-nav ml-auto"&gt;
+        &lt;li class="nav-item active"&gt;&lt;a class="nav-link" href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#gallery"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;header class="hero text-center" id="about"&gt;
+    &lt;div class="container"&gt;
+      &lt;h1 class="display-4"&gt;Welcome to My Photography&lt;/h1&gt;
+      &lt;p class="lead"&gt;A collection of landscapes, wildlife and travel photographs.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;main class="container py-5" id="gallery"&gt;
+    &lt;h2 class="text-center mb-4"&gt;Gallery&lt;/h2&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-12 col-md-6 col-lg-4 mb-4"&gt;
+        &lt;div class="card h-100"&gt;
+          &lt;img src="images/photo1.jpg" class="card-img-top img-fluid" alt="Mountain landscape at sunrise"&gt;
+          &lt;div class="card-body"&gt;&lt;h3 class="card-title h5"&gt;Landscapes&lt;/h3&gt;
+            &lt;p class="card-text"&gt;Mountains, coasts and changing light.&lt;/p&gt;
+            &lt;a class="btn btn-primary" href="#"&gt;View gallery&lt;/a&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="col-12 col-md-6 col-lg-4 mb-4"&gt;
+        &lt;div class="card h-100"&gt;
+          &lt;img src="images/photo2.jpg" class="card-img-top img-fluid" alt="Bird resting on a branch"&gt;
+          &lt;div class="card-body"&gt;&lt;h3 class="card-title h5"&gt;Wildlife&lt;/h3&gt;
+            &lt;p class="card-text"&gt;Animals observed in their environment.&lt;/p&gt;
+            &lt;a class="btn btn-primary" href="#"&gt;View gallery&lt;/a&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="col-12 col-md-6 col-lg-4 mb-4"&gt;
+        &lt;div class="card h-100"&gt;
+          &lt;img src="images/photo3.jpg" class="card-img-top img-fluid" alt="Colourful street on a journey"&gt;
+          &lt;div class="card-body"&gt;&lt;h3 class="card-title h5"&gt;Travel&lt;/h3&gt;
+            &lt;p class="card-text"&gt;Places, details and moments from the road.&lt;/p&gt;
+            &lt;a class="btn btn-primary" href="#"&gt;View gallery&lt;/a&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+
+  &lt;footer class="bg-dark text-white text-center py-4"&gt;
+    &lt;p class="mb-0"&gt;&amp;copy; 2026 My Photography&lt;/p&gt;
+  &lt;/footer&gt;
+  &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"&gt;&lt;/script&gt;
+  &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><p>On a large screen all three cards sit side by side. At smaller widths the breakpoint classes reorganise them, and the navigation collapses automatically.</p></section>
+<section class="tutorial-section" aria-labelledby="exercise"><h2 id="exercise">Final Exercise</h2><ol><li>Replace the sample site title.</li><li>Replace the three sample image paths with your own photographs.</li><li>Change the gallery titles.</li><li>Resize the browser.</li><li>Test the burger menu.</li><li>Observe how the cards reorganise at different widths.</li></ol><p class="mb-0">You do not need GitHub yet. Save <code>index.html</code> and simply open it locally in your browser.</p></section>
+<section class="tutorial-section intro-card" aria-labelledby="outcome"><h2 id="outcome">What You Should Have at the End of Tutorial 2</h2><p>You now have:</p><ul><li>an HTML page with Bootstrap loaded</li><li>responsive navigation and photographs</li><li>a responsive gallery grid</li><li>three Bootstrap cards</li><li>a basic understanding of breakpoints</li></ul><p class="mb-0">Most importantly, you understand enough of the generated HTML to recognise these patterns later when ChatGPT starts helping you create more sophisticated pages.</p></section>
+<section class="next-panel p-4 p-md-5" aria-labelledby="next-tutorial"><span class="badge mb-3">Planned</span><h2 id="next-tutorial" class="h3 font-weight-bold">Next: Tutorial 3 — Setting Up GitHub Pages</h2><p class="mb-0">Put the page you have just created into a GitHub repository and publish it on the web.</p></section>
+<div class="d-flex flex-column flex-sm-row justify-content-between mt-4"><a class="font-weight-bold mb-2" href="tech-build-photography-website-ai-architecture.html"><i class="bi bi-arrow-left" aria-hidden="true"></i> Previous: Tutorial 1 — Choosing an Architecture</a><a class="font-weight-bold" href="tech-build-photography-website-ai.html">Back to: Build a Photography Website with AI</a></div>
+</main>
+<footer class="text-center"><div class="social-links"><a href="https://www.instagram.com/stuartleach2" target="_blank" rel="noopener"><i class="bi bi-instagram" aria-hidden="true"></i> Instagram</a><a href="https://www.threads.net/@stuartleach2" target="_blank" rel="noopener"><i class="bi bi-threads" aria-hidden="true"></i> Threads</a></div><p class="mb-1">&copy; 2024 Stuart Leach. All rights reserved.</p><p class="mb-0">Website content and design assistance provided by ChatGPT.</p></footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
