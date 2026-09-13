@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Technology - Stuart Leach Photography</title>
+  <title>Lifelong Learning - Stuart Leach Photography</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
@@ -95,6 +95,14 @@
       margin: 0 auto;
       max-width: 760px;
       opacity: .96;
+    }
+
+    .hero-attribution{
+      display: block;
+      margin-top: .65rem;
+      color: rgba(255,255,255,.7);
+      font-size: .82rem;
+      font-style: italic;
     }
 
     .topic-card{
@@ -220,7 +228,7 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-        <li class="nav-item active"><a class="nav-link" href="tech.html">Technology</a></li>
+        <li class="nav-item active"><a class="nav-link" href="tech.html">Learning</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
@@ -230,12 +238,10 @@
   <div class="hero-shell">
     <section class="hero-panel">
       <div class="hero-content">
-        <div class="eyebrow">Practical knowledge base</div>
-        <h1>Technology</h1>
-        <p>
-          A practical knowledge base covering website development, AI-assisted software development,
-          data visualisation and modern delivery practices.
-        </p>
+        <div class="eyebrow">Lifelong Learning</div>
+        <h1>Learning</h1>
+        <p>Photography, creativity, curiosity and things I’ve learned along the way.</p>
+        <small class="hero-attribution">— ChatGPT, during one of our website conversations</small>
       </div>
     </section>
   </div>
@@ -243,11 +249,11 @@
   <main class="container my-5">
     <section class="row mb-5">
       <div class="col-lg-9 mx-auto text-center">
-        <h2 class="h4 font-weight-bold mb-3">Practical guides, tutorials and reusable examples</h2>
+        <h2 class="h4 font-weight-bold mb-3">Things I’m learning and sharing</h2>
         <p class="section-intro mx-auto mb-0">
-          This section is designed as a working knowledge base for methods, patterns and resources that can be reused.
-          It will collect concise tutorials, implementation notes, downloadable examples and lessons learned from real delivery work,
-          with an emphasis on teaching repeatable approaches rather than documenting a personal story.
+          This is a place for the things I learn by making, experimenting and occasionally getting things wrong.
+          Some begin with photography, others lead into art, technology or completely different directions.
+          Where something might be useful to someone else, I’ll try to turn what I learned into a practical guide.
         </p>
       </div>
     </section>
@@ -258,13 +264,51 @@
           <p class="eyebrow text-muted mb-2">Start here</p>
           <h2 id="learning-paths-heading" class="h3 font-weight-bold mb-2">Learning Paths</h2>
           <p class="section-intro mb-0">
-            Each path is structured so future guides can be added as focused modules, examples or downloads.
+            Creative experiments and practical guides from subjects I have explored over time.
           </p>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-lg-6 mb-4">
+        <div class="col-md-6 mb-4">
+          <article class="card topic-card">
+            <div class="card-body p-4">
+              <div class="topic-icon"><i class="bi bi-camera" aria-hidden="true"></i></div>
+              <span class="status-badge">Coming Soon</span>
+              <h3 class="h5 font-weight-bold">Photography &amp; Editing</h3>
+              <p class="text-muted font-italic">Composition, perspective, editing and the small lessons that make photographs better.</p>
+              <h4 class="h6 font-weight-bold">Possible topics</h4>
+              <ul class="topic-list">
+                <li>Composition and perspective</li>
+                <li>Lightroom and Snapseed</li>
+                <li>Black &amp; white editing</li>
+                <li>Long exposures</li>
+                <li>Learning from photographs that did not quite work</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <article class="card topic-card">
+            <div class="card-body p-4">
+              <div class="topic-icon"><i class="bi bi-palette" aria-hidden="true"></i></div>
+              <span class="status-badge">Coming Soon</span>
+              <h3 class="h5 font-weight-bold">Watercolour &amp; Paint-by-Numbers</h3>
+              <p class="text-muted font-italic">Turning photographs into paintings, palettes and practical creative projects.</p>
+              <h4 class="h6 font-weight-bold">Possible topics</h4>
+              <ul class="topic-list">
+                <li>Photo to paint-by-numbers</li>
+                <li>Simplifying an image</li>
+                <li>Building a palette</li>
+                <li>Creating numbered painting maps</li>
+                <li>Watercolour experiments</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 mb-4">
           <article class="card topic-card">
             <div class="card-body p-4">
               <a class="topic-icon" href="tech-build-photography-website-ai.html" aria-label="Open Building a Photography Website with AI learning path"><i class="bi bi-window-sidebar"></i></a>
@@ -285,7 +329,7 @@
           </article>
         </div>
 
-        <div class="col-lg-6 mb-4">
+        <div class="col-md-6 mb-4">
           <article class="card topic-card">
             <div class="card-body p-4">
               <div class="topic-icon"><i class="bi bi-bar-chart-line"></i></div>
@@ -303,7 +347,7 @@
           </article>
         </div>
 
-        <div class="col-lg-6 mb-4">
+        <div class="col-md-6 mb-4">
           <article class="card topic-card">
             <div class="card-body p-4">
               <div class="topic-icon"><i class="bi bi-diagram-3"></i></div>
@@ -322,7 +366,7 @@
           </article>
         </div>
 
-        <div class="col-lg-6 mb-4">
+        <div class="col-md-6 mb-4">
           <article class="card topic-card">
             <div class="card-body p-4">
               <div class="topic-icon"><i class="bi bi-box-seam"></i></div>
@@ -343,11 +387,10 @@
     </section>
 
     <section class="resource-panel p-4 p-md-5 mt-2">
-      <h2 class="h4 font-weight-bold">Future Resources</h2>
+      <h2 class="h4 font-weight-bold">More to explore</h2>
       <p class="section-intro mb-0">
-        The knowledge base will expand over time with practical tutorials, downloadable templates, example repositories and
-        concise reference material. Future guides should remain task-focused, easy to scan and supported by reusable assets
-        wherever possible.
+        I’ll add practical tutorials, examples and occasional downloads as I explore new ideas. The aim is to share
+        what helped, what surprised me and what might make someone else’s next experiment a little easier.
       </p>
     </section>
   </main>
